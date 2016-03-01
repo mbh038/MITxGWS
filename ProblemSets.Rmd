@@ -1,0 +1,56 @@
+---
+title: "MITx12.340x GWS"
+author: "Michael Hunt"
+date: "February 27, 2016"
+output: html_document
+---
+
+### A little climate physics
+
+#### Problem 2: Equator to pole temperature difference
+
+The annual mean incident solar radiation $I(\phi)$ as a function of latitude $\phi$ is given approximately by
+
+$$I(\phi) = 342 \left(1 - 0.48 \dfrac{(3 \sin^2\phi -1)}{2}\right)$$
+
+```{r}
+I<-function(phi){
+    342*(1 - 0.48 *(1/2)*(3 *(sin(phi))^2 -1))
+}
+I(0)
+I(pi/2)
+
+
+albedo<-function(phi){
+    albedo<-0.3
+}
+```
+Suppose the atmosphere is transparent to short-wave radiation, but opaque to long-wave radiation. In this case, Ta=Te.
+
+Now,
+
+$$\sigma T_e^4(\phi)=(1-\alpha(\phi))I(\phi)$$
+
+so
+
+$$T_e(\phi) = \left[\frac{(1-\alpha(\phi))I(\phi)}{\sigma}\right]^{1/4}$$
+
+
+
+
+
+```{r}
+Te<-function(phi){
+    sigma<-5.670373e-8
+    ((1-albedo(phi))*I(phi)/sigma)^0.25
+}
+```
+Hence we can find the atmospheric temperature difference between the equator and pole in radiative equilibrium, 
+
+$$\Delta T_a  = T_a(0^\circ{}) - T_a(90^\circ{})$$
+
+```{r}
+Te(0)
+Te(pi/2)
+Te(0)-Te(pi/2)
+```
