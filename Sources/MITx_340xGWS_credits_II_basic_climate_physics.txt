@@ -1,0 +1,98 @@
+MITx: 12.340x Global Warming Science
+
+Credits
+
+Part II: Basic Climate Physics
+
+Schematic of electronic transition © Wikimedia User:WillowW. License CC BY-SA. http://commons.wikimedia.org/wiki/File:Bohr_model_Balmer_32.png
+Water infrared absorption coe?cients vs. wavelength © Wikimedia User:Darekk2. License CC BY-SA. http://commons.wikimedia.org/wiki/File:Water_infrared_absorption_coefficient_large.gif
+Gaussian and Lorentzian broadening ©Wikimedia User:Petergans. Image is released into the public domain. http://en.wikipedia.org/wiki/File:Gauss_and_Lorentz_lineshapes.png
+Energy level diagram for rotational and vibrational transitions ©Wikimedia User:David-i98. License CC BY-SA, http://commons.wikimedia.org/wiki/File:Vibrationrotationenergy.svg
+Calculations of radiative equilibrium temperature profile with lapse rate adjustments. Manabe, S. and Strickler, R. F. "Thermal equilibrium of the atmosphere with a convective adjustment." J. Atmos. Sci. 21 (1964) 361-385.
+Plot of virtual potential temperature measurements vs. height in Albequerque, August 3, 1993 © American Meteorological Society. Source: Rennó , N. O. and E. R. Williams “Quasi-Lagrangian measurements in convective boundary layer plumes and their implications”
+Full calculation of radiative equilibrium temperature profile © American Meteorological Society. Manabe, S. and Strickler, R. F. "Thermal equilibrium of the atmosphere with a convective adjustment." J. Atmos. Sci. 21 (1964) 361-385.
+Vertical temperature pro?le of atmospheric layers. Image created by Dale Ward,
+Animated output from GCM ©Tierry Corti and Urs Beyerle ETH Zurich
+Lateral heat transport by atmosphere and oceans. "The annual cycle of the energy budget. Part II: Meridional structures and poleward transports." J. Climate 21 (2008) 2313-2325. © American Meteorological Society (AMS)
+500 hPa level pressure velocity ©Wikimedia User:William M. Connolley. License: CC BY-SA 3.0 http://commons.wikimedia.org/wiki/File:Omega-500-july-era40-1979.png
+Cloud classification table. Pretor-Pinney, G. (2007). The Cloudspotter's Guide: The Science, History, and Culture of Clouds. ©Perigee Trade
+The ten cloud genera and special cloud forms.Lamb, D. and Verlinde, J. (2011) Physics and Chemistry of Clouds ©Cambridge University Press.
+Photo of stratus cloud ©University of Illinois
+Photo of cirrus cloud. ©Wikimedia User:Fir0002. License: CC BY-SA 3.0 http://commons.wikimedia.org/wiki/File:Cirrus_clouds2.jpg
+Photo of cumulus cloud. ©Kevin Udy/Colorado Clouds Blog. License: CC BY-SA http://www.coclouds.com/436/cumulus/2012-07-26/
+Photo of cirrostratus cloud ©J.K. Roskovensky.
+Photo of cirrus virga ©T. Credner and S. Kohle, AlltheSky.com
+Terminology relating to atmospheric particles. Seinfeld, J. H. and Pandis, S. N. (2012). Atmospheric Chemistry and Physics: From Air Pollution to Climate Change. ©John Wiley & Sons
+Schematic of aerosol surface area distribution. Seinfeld, J. H. and Pandis, S. N. (2012). Atmospheric Chemistry and Physics: From Air Pollution to Climate Change. ©John Wiley & Sons
+Graph of observations from a nucleation event. Iida, K. et al. "Estimating nanoparticle growth rates from size dependent charged fractions: Analysis of new particle formation events in Mexico City." J. Geophys. Res. 113 (2008) D05207 ©American Geophysical Union
+Soot and biomass burning aerosol. Li, J. et al. "Individual aerosol particles from biomass burning in southern Africa: 2, Compositions and aging of inorganic particles." J. Geophys. Res. 108 (2003) D13. ©American Geophysical Union
+Metal aerosol. Helble, J. J. "Combustion aerosol synthesis of nanoscale ceramic powders." Journal of Aerosol Science 29 (1998) 721-736 ©AAAS
+Stages of sea salt particle production. Source: Pruppacher, H. R. and Klett, J. D. (1997). Microphysics of Clouds and Precipitation. ©Springer
+Graph of number of droplets per salt water bubble. Source: Pruppacher, H. R. and Klett, J. D. (1997). Microphysics of Clouds and Precipitation. ©Springer.
+Feasible range of wind speed and grain size for atmospheric saltation of quartz grains. Source: Pruppacher, H. R. and Klett, J. D. (1997). Microphysics of Clouds and Precipitation ©Springer.
+Individual contributions to radiative forcing of Earth's climate. From the IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Cumulative energy budget for the Earth since 1950. Source: Murphy, D. M. et al. \An observationally based energy balance for the Earth since 1950." J. Geophys. Res. 114 (2009) D17107. ©American Geophysical Union
+Photo of the Great Smog in London. ©Wikimedia User:Edward. License: CC BY-SA 2.0 http://commons.wikimedia.org/wiki/File:Nelson%27s_Column_during_the_Great_Smog_of_1952.jpg
+Schematic of Earth's energy balance. Seinfeld, J. H. and Pandis, S. N. (2012). Atmospheric Chemistry and Physics: From Air Pollution to Climate Change. ©John Wiley & Sons.
+Schematic of Earth's energy balance. Seinfeld, J. H. and Pandis, S. N. (2012). Atmospheric Chemistry and Physics: From Air Pollution to Climate Change. ©John Wiley & Sons
+Aerosol measurement instruments ©TSI.
+Schematic of particle mass spectroscopy. Image created by D. Gross.
+Vertical profiles of different aerosol types. Image created by K. Froyd.
+Table of global emission estimates for major aerosol classes. Seinfeld, J. H. and Pandis, S. N. (2012). Atmospheric Chemistry and Physics: From Air Pollution to Climate Change. © John Wiley & Sons
+Maps of aerosol optical depth. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Table of estimates of aerosol direct radiative effect. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+"Global estimate of aerosol direct radiative forcing from satellite measurements." Nature 438 (2005) 1138-1141.
+Historical time series of black carbon concentrations © AAAS. Source: McConnell, J. R. et al. "20th-Century industrial black carbon emissions altered Arctic climate forcing." Science 317 5843 (2007) 1381-1384.
+Historical time series of black carbon, vanillic acid, and non-sea-salt sulfur concentrations © AAAS. Source: McConnell, J. R. et al. "20th-Century industrial black carbon emissions altered Arctic climate forcing." Science 317 5843 (2007) 1381-1384.
+Paleo reconstructions of lead and scandium concentrations © AAAS. Source: Shotyk, W. et al. "History of atmospheric lead deposition since 12,370 14C yr BP from a peat bog, Jura Mountains, Switzerland." Science 281 5383 (1998) 1635-1640.
+Maps of aerosol optical depth. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Graph of aerosol direct radiative forcing estimates. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Forcings and feedbacks in the climate system. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Components of the climate change process. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Schematic of aerosol radiative effects. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Zonal mean changes in ice water content since pre-industrial times; radiative forcing © American Geophysical Union Source: Lohmann, U. \A glaciation indirect aerosol effect caused by soot aerosols." Geophys. Res. Lett. 29 4 (2002) 11-1-11-4.
+Individual contributions to radiative forcing of Earth's climate © IPCC TAR report (2001), https://www.ipcc.ch/ipccreports/tar/
+Albedo chart of various surfaces. By Wereon assumed. CC BY-SA 2.5, http://commons.wikimedia.org/wiki/File:Albedo-e_hg.svg
+Map of percentage increase in wildfire area burned, western US. © American Geophysical Union Source: Murphy, D. M. et al. "Impacts of climate change from 2000 to 2050 on wildfire activity and carbonaceous aerosol concentrations in the western United States." J. Geophys. Res. 114 (2009) D20301.
+Fig. 28(a): Estimates of 1750-2000 climate forcings © American Geophysical Union. Source: Hansen, J., et al. (2005), Efficacy of climate forcings, J. Geophys. Res., 110, D18104, doi:10.1029/2005JD005776.
+Rayleigh and Mie scattering © Wikimedia User:Sharayanan. License CC BY-SA. http://commons.wikimedia.org/wiki/File:Mie_scattering.svg
+Plots of cloud albedo and absorption vs. liquid water path an zenith angle. © American Meteorological Society. Source: Stephens, G.L. "Radiation profiles in extended water clouds. II: Parameterization schemes." J. Atmos. Sci. 35(1978) 2123-2132.
+Atmospheric energy budget. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Blackbody curves at various temperatures. Wikimedia User: Darth Kule. License CC BY-SA. http://commons.wikimedia.org/wiki/File:Black_body.svg
+Radiation transmitted by atmosphere. Image created by Robert A. Rohde/Global Warming Art. License CC BY NC SA.
+Photos of ships. Courtesy of Woods Hole Oceanographic Institiution Archives,  © WHOI.
+Argo array deployment map and example photo. Courtesy of Argo program. http://www.argo.ucsd.edu/Acknowledging_Argo.html
+Vertical temperature cross-section at 25 W in the North Atlantic. Courtesy of Lynn Talley, University of California, San Diego.
+Lateral heat transport by atmosphere and oceans. Fasullo, J. T. and Trenberth, K. E. "The annual cycle of the energy budget. Part II: Meridional structures and poleward transports." J. Climate 21 (2008)2313-2325.
+Heat content of ocean, land, ice, and atmosphere vs. time © Elsevier. Source: Nuccitelli, D. et al. Comment on Fair use, "Ocean heat content and Earth's radiation imbalance. II. Relation to climate shifts." Phys. Let. A. 45 (2012) 3466-3468.
+Sources and sinks of anthropogenic carbon vs. time. Image created by Samar Khatiwala, Lamont-Doherty Earth Observatory, Columbia University, http://www.earth.columbia.edu/articles/view/2586
+Global map of ocean surface pH changes since the 1700s. Wikimedia  User:Plumbago. License CC BY-SA. http://commons.wikimedia.org/wiki/File:WOA05_GLODAP_del_pH_AYool.png
+Biological and physical pumps of carbon dioxide. Wikimedia User:Hannes Grobe. License CC BY-SA. http://commons.wikimedia.org/wiki/File:CO2_pump_hg.png
+Atmospheric CO2 levels for various emission scenarios © National Academy of Sciences. Source: Solomon, S. et al. "Irreversible climate change due to carbon dioxide emissions." Proc. Nat. Acad. Sci. 106 (2009) climate change due to carbon dioxide emissions." Proc. Nat. Acad. Sci. 106 (2009) 1704-1709.
+Schematic of short-term carbon fluxes © American Institute of Physics. Source: Sarmiento J. L. and Gruber, N."Sinks for anthropogenic carbon." Physics Today 55 8 (2002) 30-36.
+Carbon emissions from fossil fuels and land-use changes over time. © Le Qu?er?e, C. et al. "Global carbon budget 2013." Earth Syst. Sci. DataDiscuss. 6 (2013) 689-760.
+Photographs of CO2 emission sources. © Le Qu?er?e, C. et al. "Global carbon budget 2013." Earth Syst. Sci. DataDiscuss. 6 (2013) 689-760.
+Graph of concentration vs. pH for constituents of DIC. © Cambridge University Press. Source: Williams, R. G. and Follows, M. J.(2011), Ocean Dynamics and the Carbon Cycle: Principles and Mechanisms.
+Map showing locations of Station Aloha and Station Manua Loa in Hawaii © Oceanography Society Source: Feely, R. A. "Ocean acidification: Present conditions and future changes in a high-CO2 world." Oceanography 22 4 (2009) 36-47.
+Graph of atmospheric CO2, oceanic pCO2, and oceanic pH over time. © Oceanography Society. Source: Feely, R. A. "Ocean acidification: Present conditions and future changes in a high-CO2 world." Oceanography 22 4 (2009) 36-47.
+Graph of calcite and aragonite saturation states over time © Oceanography Society. Source: Feely, R. A. "Ocean acidification: Present conditions and future changes in a high-CO2 world." Oceanography 22 4 (2009) 36-47.
+Sections of DIC concentration in Atlantic and Pacific oceans © Cambridge University Press. Source: Williams, R. G. and Follows, M. J.(2011), Ocean Dynamics and the Carbon Cycle: Principles and Mechanisms.
+Sections of potential temperature in Atlantic and Pacific oceans © Cambridge University Press. Source: Williams, R. G. and Follows, M. J.(2011), Ocean Dynamics and the Carbon Cycle: Principles and Mechanisms.
+Graph of DIC concentration vs. temperature © Cambridge University Press. Source: Williams, R. G. and Follows, M. J.(2011), Ocean Dynamics and the Carbon Cycle: Principles and Mechanisms.
+Schematic of solubility pump © Cambridge University Press. Source: Williams, R. G. and Follows, M. J.(2011), Ocean Dynamics and the Carbon Cycle: Principles and Mechanisms.
+Map of annual-mean air-sea CO2 flux © Elsevier. Source: Takahashi, T. et al. "Global seaair CO2 flux based on climatological surface ocean pCO2, and seasonal biological and temperature effects."Deep Sea Res. II 49 9-10 (2002) 1601-1622.
+Schematic of biological pump. © Nature Publishing Group. Source: Chisholm, S. W. "Oceanography:Stirring times in the Southern Ocean." Nature 407 (2000) 685-687.
+Graph of sinking particle flux vs depth © Elsevier. Source: Martin, J. H. et al. "VERTEX: carbon cycling in the northeast Pacific." Deep Sea Res. A 34 2 (1987) 267-285.
+Schematic of carbonate pump ©Cambridge University Press. Source: Williams, R. G. and Follows, M. J.(2011), Ocean Dynamics and the Carbon Cycle: Principles and Mechanisms.
+Modeled response to 1000 Pg C pulse © Annual Reviews. Source: Archer, D. et al. "Atmospheric lifetime of fossil fuel carbon dioxide." Annu. Rev. Earth Planet. Sci. 37 (2009) 117-134.
+Schematic of carbon cycle on geologic timescales © Cambridge University Press. Source: Williams, R. G. and Follows, M. J.(2011), Ocean Dynamics and the Carbon Cycle: Principles and Mechanisms.
+Graph of temperature and atmospheric CO2 over geologic time © Nature Publishing Group. Source: Beerling, D. J. and Royer, D. L. "Convergent Cenozoic CO2 history." Nature Geosci. 4 (2011) 418-420.
+Graphs of CO2 and CH4 levels vs. time. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Sources of CO2 emissions from fuel burning. IPCC SRES report (2000) © IPCC, http://www.ipcc.ch/ipccreports/sres/emission/index.php?idp=0
+Annual greenhouse gas emissions by sector. IPCC SRES report (2000) © IPCC, http://www.ipcc.ch/ipccreports/sres/emission/index.php?idp=1
+CH4 and N2O global emissions. IPCC SRES report (2000) © IPCC, http://www.ipcc.ch/ipccreports/sres/emission/index.php?idp=2
+Graph of HCFC and HFC concentraions vs. time. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Graph of N2O observations vs. recent time from AGAGE © American Geophysical Union. Source: Rigby, M. et al. "Renewed growthof atmospheric methane." Geophys. Res. Lett. 35 (2008) L22805.
+Contributions to projected surface warming for A1B scenario by various gases © National Academy of Sciences. Source: Solomon, S. et al. "Persistence of climate changes due to a range of greenhouse gases." Proc. Natl. Acad. Sci. U.S.A. 107 43 (2010) 18354-18359.
+Graph of HCFC and HFC concentraions vs. time. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Velders, G. J. M. et al. "The importance of the Montreal Protocol in protecting climate." Proc. Natl. Acad. Sci. U.S.A. 104 12 (2007) 4814-4819.

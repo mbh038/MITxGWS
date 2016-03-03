@@ -1,0 +1,63 @@
+MITx: 12.340x Global Warming Science
+
+Credits
+
+Part III: The Global Climate System and Climate Modeling
+
+Schematic of climate forcings and feedbacks. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Painting of Milutin Milankovic © Paja Jovanovic/Basil Vasca Milankovic.
+Schematic of Milankovic cycles. © C. H. Beck. Source: Rahmstorf, S. and Schnellnhuber, H-J. (2007), Der Klimawandel: Diagnose, Prognose, Therapie.
+Climate forcing and response. By Robert A. Rohde/Global Warming Art. License CC BY NC SA.
+Graph of ice volume and high latitude summer insolation over time. © AAAS. Source: Huybers, P.J. “Early pleistocene glacial cycles and the integrated summer insolation forcing." Science 313 5786 (2006) 508-511.
+400 years of sunspot observations. By Robert A. Rohde/Global Warming Art. License CC BY NC SA.
+Graph of solar cycle variations. By Robert A. Rohde/Global Warming Art. License CC BY NC SA.
+Graph of _14C vs time showing solar activity events. © Wikimedia User:Leland McInnes, CC BY-SA 3.0, http://commons.wikimedia.org/wiki/File:Carbon14_with_activity_labels.svg
+Graph of _14C and sunspots vs time © Wikimedia User:Leland McInnes. License: CC BY-SA 3.0, http://commons.wikimedia.org/wiki/File:Carbon14-sunspot.svg
+Graph showing observations of solar activity over time © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Graph of temperature, CO2, and sunspots © Wikimedia User:Leland McInnes. License: CC BY-SA 3.0, http://commons.wikimedia.org/wiki/File:Temp-sunspot-co2.svg
+Graph of atmospheric CO2 concentration vs. time. Image created by Robert A. Rohde/Global Warming Art. License CC BY NC SA.
+Graph of concentrations of all anthropogenic greenhouse gases vs. time © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Graph of ozone radiative forcing vs. time © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Graphs of CO2 and CH4 concentrations over time from paleo records. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Graphs of CO2 temperature over geologic time. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Graph of volcanic aerosol optical depth vs. time © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Graphs of global SO2 emissions vs. time © European Geosciences Union. Source: Smith, S. J. et al. “Anthropogenic sulfur dioxide emissions: 1850-2005." Atmos. Chem. Phys. 11 (2011) 1101-1116.
+Graph of radiative forcing due to aerosols and black carbon vs. time © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Variation with time of climate forcings © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Contributions to net radiative forcing change of individual agents, 1750-2011 © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Uncertainties in aerosol and greenhouse gas forcings © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Graph of annual range of zonal monthly surface albedo estimates © American Meteorological Society. Source: Kukla, D. and Robinson, G. “Annual cycle of surface albedo." Mon. Wea. Rev. 108 (1980) 56-68.
+Stability diagram for ice line latitude vs. radiative forcing © Wiley. Hoffman, P. F. and Schrag, D. P. “The snowball Earth hypothesis: Testing the limits of climate change." Terra Nova 14 (2002) 129-155.
+Feedbacks in climate models © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Temperature change associated with Planck response and feedbacks in various GCMs © American Meteorological Society. Source: Dufresne, J-L. and Bony, S. “An assessment of the primary sources of spread of global warming estimates fromcoupled atmosphere-ocean models." J. Climate 21 (2008) 5135-5144.
+Schematic of 3D ?nite-di?erence grid © Seismological Society of America. Kang, T-S. and Baag, C-E. \Ancient  nite-di erence method for simulating 3D seismic response of localized basin structures." Bull. Seismol. Soc. Am. 94 5 (2004) 1690-1705.
+Maps of changes in annual maximum 5-day precipitation and maximum number of consecutive dry days © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Maps of projected changes in near-surface relative humidity from CMIP5 © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Maps of CMIP5 multi-model median change in 20-year return values of annual warm temperature extremes © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Maps of temperature and precipitation change patterns from CMIP5 © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Graph of surface temperature change under di?erent emissions scenarios © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Graph of near-term projections of global mean temperature © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Graph of sources of uncertainty in projected global mean temperature © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Graph of radiative forcing of the representative concentration pathways © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Plots of potential temperature and salinity from the CMIP5 models and observations © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Annual mean cloud radiative e?ects from the CMIP5 models and observations (maps and graphs) © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Two global maps of annual mean precipitation rate © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Four global maps of annual-mean surface air temperature © IPCC From the IPCC AR5 report (2013),  https://www.ipcc.ch/report/ar5/
+Ensemble of climate models, Scenario A1B © InTech. Gebetsroither, E. et al. \Drought in alpine areas under changing climate conditions." Management Strategies to Adapt Alpine Space Forests to Climate Change Risks (2013) 165-189.
+Graphs of global mean temperature vs. time from simulations and observations. IPCC AR4 report (2007) © IPCC, http://www.ipcc.ch/report/ar4/
+Simulated change in low clouds with doubling of CO2 in two models. © American Meteorological Society. Source: Stephens, G. L. \Cloud feedbacks in the climate system: A critical review." J. Climate 18 (2005) 237-273.
+Cloud fraction as simulated by 25 atmospheric GCMs. © American Meteorological Society. Source: Weare, B.C. and Mokhov, I. I.\Evaluation of total cloudiness and its variability in the Atmospheric Model Intercomparison Project." J. Climate 8 (1995) 2224-2238.
+Photo of altostratus cloud. Wikimedia User:Earth100. License CC BY-SA. http://commons.wikimedia.org/wiki/File:Altostratus_clouds_over_Hong_Kong.JPG
+Photo of altocumulus cloud. Wikimedia User:LivingShadow. License CC BY-SA. http://commons.wikimedia.org/wiki/File: Partially_illuminated_Ac_with_shadows.JPG
+Photo of sea ice. © Lamont-Doherty Earth Observatory, Columbia University.
+Photo of Earth Simulator. Wikimedia User:Was a bee. License CC BY-SA. http://commons.wikimedia.org/wiki/File:Earth_simulator_ES2.jpg
+Graph of supercomputer performance vs time. Wikimedia User:AI.Graphic. License CC BY-SA. http://commons.wikimedia.org/wiki/File:Supercomputers.png
+The development of climate models, past, present, and future © IPCC TAR report (2001), https://www.ipcc.ch/ipccreports/tar/
+500 hPa anomaly correlations in ECMWF model © European Center for Medium-Range Weather Forecasts.
+Observed and forecast ?elds of geopotential height and vorticity © Blackwell Munksgaard. Source: Charney, J. G. et al. \Numerical integration of the barotropic vorticity equation." Tellus 2 (1950) 237-254.
+Finite-di?erence grid over North America © Blackwell Munksgaard. Source: Charney, J. G. et al. \Numerical integration of the barotropic vorticity equation." Tellus 2 (1950) 237-254.
+Photos of Jule Charney © Massachusetts Institute of Technology.
+Portrait of Vilhelm Bjerknes © University of Leipzig.
+Spherical Fibonacci grid © Royal Meteorological Society. Source: Swinbank, R. and Purser, R. J. \Fibonacci grids: A novel approach to global modelling." Quart. J. Roy. Meteor. Soc. 132 (2006) 1769-1793.
+Spherical geodesic grid © Colorado State University.
+Conformal mapping of cube onto sphere © Peter Lauritzen/UCAR.
