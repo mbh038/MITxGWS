@@ -54,3 +54,12 @@ Te(0)
 Te(pi/2)
 Te(0)-Te(pi/2)
 ```
+
+### The Paleocene-Eocene Thermal Maximum
+The current rate of emission of carbon dioxide by humans through fossil fuel use is around 7 Pg of Carbon per year. Suppose during the entire PETM 10 000 Pg of carbon was released into the atmosphere. Assuming this release took 200 thousand years*, what is the ratio of the current emission of carbon through the burning of fossil fuels to the average rate of release of carbon during the PETM?
+
+```{r}
+7/(10000/200000)
+```
+
+*NOTE: The estimate used here for the timescale over which Carbon was input into the atmosphere during the PETM is based on the duration of the entire event. Modern paleo-climatic studies have suggested the Carbon impulse may have been much shorter in duration - 10,000 years or even shorter. Using this shorter timescale would give a ratio 20 times smaller.
