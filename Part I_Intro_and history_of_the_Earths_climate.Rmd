@@ -63,3 +63,44 @@ The current rate of emission of carbon dioxide by humans through fossil fuel use
 ```
 
 *NOTE: The estimate used here for the timescale over which Carbon was input into the atmosphere during the PETM is based on the duration of the entire event. Modern paleo-climatic studies have suggested the Carbon impulse may have been much shorter in duration - 10,000 years or even shorter. Using this shorter timescale would give a ratio 20 times smaller.
+
+### Oxygen Isotopes and the climate
+
+#### Q1b
+![formanifera](figures/Erez1983_O18Isotopefractionation.jpg)
+
+Imagine a world in which there are no polar land masses to support ice-caps. Under these conditions the amount of land ice remains small regardless of the temperature. In this ice-free world, the istopes of oxygen in the ocean are measured. For every one mole of $\delta^{16}O$ in the ocean there are 0.002005 moles of $\delta^{18}O$. The oxygen isotopes of a Foraminifera sample from the recent past are also measured. For every one mole of $\delta^{16}O$ in the Foraminifera, there are 0.002000 moles of $\delta^{18}O$.
+
+Now suppose a much older fossilized Foraminifera from the same region of the ocean from a very cool period in the planet's history is found to have a isotopic ratio of $\delta^{18}O$ to $\delta^{16}O$ of 0.0020046. Use the calibration curve shown above to estimate how much cooler the ocean was during the time period when the older fossil was deposited.
+
+```{r}
+x<-0.002005
+d18Ocean<-1000*(.002005/x-1)
+d18Fnow<-1000*(.002/x-1)
+d18Fnow-d18Ocean
+d18Fthen<-1000*(0.0020046/x-1)
+d18Fthen-d18Ocean
+d18Fthen-d18Fnow
+```
+
+#### Q1c
+As was discussed in the videos, the existence of ice caps complicates the interpretation of oxygen isotope records because of the fractionation of water by evaporation and precipitation before it becomes part of the ice cap. As the temperature increases or decreases we might expect the ice cap to grow or shrink. Assuming the ice cap does indeed respond to the temperature change in this way, for a given temperature change would you expect the resultant change in $\delta^{18}O$ of Foraminifera to be larger or smaller with the existence of an ice cap?
+
+
+### Q 2c to 2f
+
+```{r}
+phi=(pi/180)*50
+delta=(pi/180)*22
+S0=1368
+
+h0=acos(-sin(phi)*sin(delta)/(cos(phi)*cos(delta)))
+h0
+
+Imean=(S0/pi)*(sin(phi)*sin(delta)*h0+cos(phi)*cos(delta)*sin(h0))
+print (Imean)
+
+Imean=(S0/pi)*cos(phi)*cos(delta)*(-cos(h0)*h0+sin(h0))
+print (Imean)
+Imean*24/1000
+```
