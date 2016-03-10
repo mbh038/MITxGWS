@@ -133,6 +133,134 @@ d18Fthen-d18Ocean</code></pre>
 <p>As was discussed in the videos, the existence of ice caps complicates the interpretation of oxygen isotope records because of the fractionation of water by evaporation and precipitation before it becomes part of the ice cap. As the temperature increases or decreases we might expect the ice cap to grow or shrink. Assuming the ice cap does indeed respond to the temperature change in this way, for a given temperature change would you expect the resultant change in <span class="math inline">\(\delta^{18}O\)</span> of Foraminifera to be larger or smaller with the existence of an ice cap?</p>
 </div>
 </div>
+<div id="q-2c-to-2f" class="section level3">
+<h3>Q 2c to 2f</h3>
+<pre class="r"><code>phi=(pi/180)*50
+delta=(pi/180)*22
+S0=1368
+
+h0=acos(-sin(phi)*sin(delta)/(cos(phi)*cos(delta)))
+h0</code></pre>
+<pre><code>## [1] 2.073161</code></pre>
+<pre class="r"><code>Imean=(S0/pi)*(sin(phi)*sin(delta)*h0+cos(phi)*cos(delta)*sin(h0))
+print (Imean)</code></pre>
+<pre><code>## [1] 486.5137</code></pre>
+<pre class="r"><code>Imean=(S0/pi)*cos(phi)*cos(delta)*(-cos(h0)*h0+sin(h0))
+print (Imean)</code></pre>
+<pre><code>## [1] 486.5137</code></pre>
+<pre class="r"><code>Imean*24/1000</code></pre>
+<pre><code>## [1] 11.67633</code></pre>
+</div>
+<div id="bare-rock" class="section level3">
+<h3>Bare Rock</h3>
+<p><span class="math display">\[I_{\text{solar}}\pi r_{\text{earth}}^2 \cdot \left ( 1-\alpha)\right)=4\pi r_{\text{earth}}^2 \epsilon \sigma T^4\]</span></p>
+</div>
+<div id="estimating-the-mean-temperature" class="section level3">
+<h3>ESTIMATING THE MEAN TEMPERATURE</h3>
+<pre class="r"><code>T1&lt;-c(9.0,9.8,10.1)
+mean(T1)</code></pre>
+<pre><code>## [1] 9.633333</code></pre>
+<pre class="r"><code>T2&lt;-c(9.0,10.9,9.4,10.9,9.8,9.9,10.6,9.1)
+mean(T2)</code></pre>
+<pre><code>## [1] 9.95</code></pre>
+<pre class="r"><code>T3&lt;-c(9.0,10.9,9.4,10.9,9.8,9.9,10.6,9.1,9.3,10.1,9.7,9.6,9.2,10.7,11.0,11.5,9.8,8.9,11.2,10.0)
+mean(T3)</code></pre>
+<pre><code>## [1] 10.03</code></pre>
+</div>
+<div id="sea-level-change" class="section level3">
+<h3>SEA LEVEL CHANGE</h3>
+<pre class="r"><code>Tw&lt;-c(0,2,4,6,8,10)
+rhoSW&lt;-c(1031.364,1031.205,1030.997,1030.763,1030.445,1030.106)
+vSW&lt;-1/rhoSW
+sw&lt;-data.frame(Tw,rhoSW,vSW)
+names(sw)&lt;-c(&quot;T&quot;,&quot;density&quot;,&quot;v&quot;)
+plot(sw$T,sw$density,type=&quot;b&quot;,col=&quot;blue&quot;,xlab=&quot;Temperature (C)&quot;,ylab=&quot;density kg/m3&quot;)</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAPACAMAAADDuCPrAAAAb1BMVEUAAAAAADoAAGYAAP8AOjoAOpAAZpAAZrY6AAA6kLY6kNtmAABmOpBmZjpmtrZmtv+QOgCQOmaQZgCQkDqQkNuQ29uQ2/+2ZgC2kDq2/7a2/9u2///bkDrbtmbb/9vb////tmb/25D//7b//9v///8rCSMZAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAgAElEQVR4nO3df4OTTL/Y4Xh7PGu17dr2HPO0d9o76r7/11hICCE/NhsGGPgO1/WP62pw0ezHAYZh8wZAks3cXwBAVAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAIgEFSCSgAIkEFCCRgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAIgEFSCSgAIkEFCCRgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAIgEFSCSgAIkEFCCRgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAIgEFSCSgAIkEFCCRgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpAoV0B/f998y/RHAeQhoACJBBQg0WQBrYp5z19/T/UHAmQmoACJpjuE3wsoULYJz4HWY9Av/5x/4hwoUJZJLyJtN5tPP48fCihQnGmvwv/6umm6KaBAcSaexvTnR3MYL6BAcSafB7rbbDavAgoUaPqJ9PVh/IuAAuXJcCdSfRj/1/8WUKA0WW7l3B2mgAooUJY898LXh/ECChQm12IiWwEFSmNBZYBEAgqQSEABEgkoQKKsAf311XJ2QDkEFCCRgAIkcg4UIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQg0WQB/f19c487kYBiCChAoukO4Q/PQRJQoFwTngOtx6CegwSUa8qLSFVBP/2ccPsAs5r0Knx1FP/lnyn/AIAZTTuNabfZvE76BwDMZ9qAVgfxhqBAqSaeSG8ICpRr2Xci3Z1KCpBk/ESNvsURzf23DZRl9EaNvcExTfAfBrBaAgqQKGpA//yoR8+9b0sSUGA8wQK6r6pZT2PaN+cf+t4IL6DAeEIF9Djs3Hz6eV5W5GFBc5zyBdYrVEC3TQS//Ksp53bzcFq9gAJTihTQatxZZ3O32bTd3PecVi+gwHgiBXTXHLBvN+2aTNVB/UufTQgoMJ5AAa1iebzq3l2Sadfv1ngBBcYTKKC/vzeH691h577fhXgBBcYTMaDVMbyAAvOLFdBm4vy2ewgvoMBMAgW0OnK/Pd+5dREJmEuggN5bCnTf83ZOAQXGEymg9UM5X64/0e9mzud293Ojz5aB9YkU0OMd8OdB6Pbyp894anc/f1ZQ4AmhAloXtPNY413vfj61u204FRR4KFZAq1Fn55B91+8CUu2J3e1kU0CBR6IFdKCnAnr/Y4ArAnpNQIEnxQvotl2ZrvcBvIACYwoW0N3V6p59GyqgwHhCBfS8EH2r5zM9BBQYT6SAHp7o0SlmPY++32p2AgqMKFJA9ze5rJM69or0pjEBT4oU0O3tAXs1CB19MRET6YHnBApouyJ91xQr0ruVE3hKoICeF1TumGRBZf0EniGgT5NU4FKggGY7hH+HYSlwKVBAc11EekBDgY5IAb0/jSnzivQaCpxECujdifRTrEj/AQ0FDiIF9FjMS531lZ8x1u5KKBAsoN2lmCZbTORZGgqrFyygb9MvZ/c8h/KwcvECOsjYu6uhsGYCOpSGwmoJ6Ag0FNZJQMehobBCAjoaDYW1EdAxaSisioCOTENhPQIF9M59SL0fKzd9QN80FFZDQCehobAGgQJ676nGSw3om1s9YQUiBfQwBu21et2NjAF901AoXaiA1gXtufzSlbwBdSgPZYsV0PoovtcjPK7lDuibhkLBggX0bbe582S5580Q0DcNhVJFC2h1ED9kCDpPQN80FIoULaADh6CzBfRNQ6E84QI6zJwBfdNQKIyAZqahUA4BzU9DoRACOgsNhRII6FwkFMIT0BlpKMQmoLNyKA+RCejcNBTCEtAF0FCISUCXQUMhIAFdDA2FaAR0STQUQhHQhdFQiENAl0dDIQgBXSQNhQgEdKk0FBZPQBdMQmHZBHTZNBQWTECXzqE8LJaABqChsEwCGoOGwgIJaBgaCksjoJFoKCyKgAajobAcAhqPhsJCCGhIGgpLIKBRaSjMTkAD01CYl4DGJqEwIwENT0NhLgJaAIfyMA8BLYOGwgwEtBgaCrkJaEnuNfSzsMJUBLQw1638/FlBYSoCWrY2nAoK4xPQonWyKaAwOgEtWreaCgpjE9CiCShMSUCLJqAwJQEtmoDClAS0aAIKUyo6oJs75v6a8hJQmJKAFs00JphS0QG9tbaAmkgPUxLQwrmVE6YjoKXTT5iMgAIkEtBVMiKFMQjoKjmohzEI6Eo5MQrDCehqSSgMJaBrJqEwiICum4TCAAK6dhIKyQQUJ0MhkYAioZBIQDmQUOhPQGlIKPQloLQkFPoRUDqcDIU+BJQLEgrPE1CuSSg8SUC5JaHwFAHlHkfy8AQB5T4JhQ8JKO+SUHhMQHlAQuERAeUhCYX3CSgfcDIU3iOgfEhC4T4B5RkSCncIKM+RULghoDxLQuGKgPI8J0PhgoDSh4RCh4DSk4TCiYDSm4TCkYCSQEKhJqAkcTIUBJRkEgoCSjoJZeUElCEklFUTUIaRUFYsXkC3m5OX/i8W0Ak4GcpqBQvobnOpb0MFdBISykqFCuivr5trf/3dawsCOhUJZY0iBfTPj8ti/v5e/fzLP302IaDTkVDWJ1JA9ze5rJP62mcTAjolR/KsTaSAbm8P2KtBaK/ToAI6LQllXQIFtBpufrv55K7fMbyATk5CWZFAAa1Gm7eH6/t+l5EENAMJZTUElPFJKCsRKKAO4QNxMpRVCBRQF5FCkVBWIFJA709juh2VPiCgOUkopYsU0LsT6fvdiiSgeUkoZYsU0GMxL3362WsLApqbhFKyUAHtLsVkMZEonAylXMEC+mY5u4AklFLFC+ggAjoTCaVIAkoeEkqBBJRcJJTiCCj5OBlKYYIH9NdX98KHIqEURUDJTEIph4CSnYRSiuAB7UtAl0FCKYOAMgsnQymBgDITCSU+AWU+EkpwAsqcJJTQBJR5OZInMAFlbhJKWALKAkgoMQkoiyChRBQooHce6LHp+1AkAV0uCSUeAWUxnAwlmkABrW98F9CySSixRAroYQza6zHwNwR08SSUQEIFtC5oz+cYXxHQACSUMGIFtD6K//LPgNcLaAgSShDBAvq222xeB7xcQINwMpQQogW0OogfMgQV0DAklACiBXTgEFRAI5FQli5cQIcR0FgElGUTUOL4/NmBPYsioITx+bOCsiwCShRtOBWUpYga0D8/6ts4e9+WJKBxdbIpoCxEsIDuq2rW05j2KTfCvwloZN1qKijLECqgx2Hn5tPP87IiDwt6b+2R6b46piWgLE+ogG6bCH75V1PO7ebhtHoBLYmAsjyRAlqNO+ts7jabtpv7ntPqBTQuAWV5IgV01xywbzftmkzVQf1Ln00IaFwCyvIECmgVy+NV9+6STLt+t8YLaFwCyvIECujv783henfYubci/VqYxsTyRAxodQwvoCtkIj2LEyugzcT5bfcQXkBXw62cLE2ggFZH7rfnO7cuIq2IfrIwgQJ6bynQfc/bOQUUGE+kgNYP5Xy5/kS/mzkFFBhPpIAe74A/D0K3lz99hoAWyDE9swkV0Lqgncca73r3U0BL5LQos4kV0GrU2Tlk3/W7gFQT0CJJKDOJFtCBBLRQEsosBJQySCgziBfQbbsyXe8DeAEtmoSSXbCA7q5W9+zbUAEtmoSSWaiAnheib/V8poeAFk5CySpSQA9P9OgUs55H3281OwEtn4SSUaSA7m9yWSfVivRcklCyyRjQxCcRn21vD9irQajFRLimoGQyfUCHPom41a5I32VFeu6RULKYOqB9n0T8wHlB5Q4LKnOX43hymDqgfZ9E/ICA0oeEMr2JAzrCk4hbDuHpR0KZ2sQBHeFJxGcuItGThDKtaQM6xpOIz+5PY7IiPQ9IKFOaNqBjPIn47O5EeivS85iEMp1MAR3wJOLLzV3rrK/81BcnoCskoUxl8oAOfhLxhe1VPy0mwjMklGlMfg508JOIb19uOTt6k1CmMPlV+MFPIh6VgK6XhDK+iQM6wpOIRyWgayahjG3qO5GGP4l4VAK6bhLKuCZfTGTwk4hHJaBrJ6GMKcNydgOfRDwqAUVCGU+kBZVHIKBIKOMRUFZIQhlHoIDeuQ+p9/KiAsqRhDKGTAHdpzevJaCMSUIZLktAm2XpBwb03lONBZR0EspQWQK6G9K8jnoMOuwuJgGlS0IZJkdA6wHoOLOXqoL2XH7pioBySUEZIkdAq+wlLqF8o7swcwoB5ZqEki5TQEdbPuTO6iR9CCg3HMeTLNMh/GgBHTiaFVDukFASZbqINN4NnMOGoALKXRJKkiwBvftE91kIKO+QUBLkmUj/6+uMiyh3CSjvklB6y3Qn0uUc+PlWVBZQHpBQeop0J9IIBJSHJJReQt2JNJyA8gEJpYdYdyINJqB8SEJ5WqaJ9Avpp4DyDAnlSdHuRBpIQHmKhPKUaHciDSSgPElCeUKmi0hjLSYylIDyNAnlQ7mmMbkTiXgklA/kmUg/4oJ2wwgovUgoD2W6iGQeKEFJKA8IKDwmobxLQOEjEso7Aj0XfgwCShIJ5S4BhWdIKHdMG9Df35dx8b0loCRTUG5MHdDNZuCDiMcloAwgoVyZ+hB+f7xs5FZOSuA4nksZzoE2F+EXsSCTgDKMhNKV5yJSsyT9fNOXTgSUoSSUs3xX4Ztl6ee9KV5AGU5COck6jal5tNyMJ0QFlDFIKEe554EeToi6E4noJJTaHBPptwJKfBKKO5EgmYQioJBMQtdOQGEACV23WZaz28y2Pr2AMjYJXbOZAjrXjUkCyvgkdL1mC+g8BRVQpiCha5XnHOivr6c1meqYfut+Ii8BZRoSuk5ZAlrl8nz30f6QziqkcwxBBZSpSOgaZQno9iKWx5/tZrmQJKBMR0LXJ9M50O4SIvvDrZz7WW7oFFCmJKFrI6AwIgldlxwB/fPj6hC+PngXUMokoWuS6RzoxUWkQ063zoFSKAldj1xX4U/jzXoaU30VfjfPsqACSg4KuhZ55oHuLqbQvx6Kah4oBZPQdci0mEizFv2mecrxPs+69PdugJr+T4U3x/ErkW01puZ+zuOR/D7P+FNAmZGEroDl7GAqElq8LPNA/+Py53/+h0d6sA4SWrg8E+kvnmU8zwzQIwElMwktWvY7kf788FROVkVCC5YpoO01o/35StIcBJQZSGixck2kPxa0Hn5uLm6Mz0xAmYWEFirPVfj9efrnbI9DOhBQZiKhRco0jalK51//Z+7h55uAMiMBLVCueaD7eZ/GeSKgwHiyTaTfb2a6/f2CgLIUnxtzfx0Mke9OpN38408BZTE+f1bQAmS8lXM318PgOwSUZWjDqaChTRvQ+0+ENw+UtetkU0AjE1DIr1tNBQ1MQCE/AS2E5ewgPwEthIBCfgJaCAGF/AS0EAIK+QloIQQU8jONqRACCjMwkb4MAgpzcCtnEQQUZqGfJRBQgEQCCpBIQAESCShAoiyPNf6vsy+kfCKgLJlLStFkei78/EspHwkoS+aqfDS5Alr5NvaflEBAWTQFDSbPOdBdsxDovM80fhNQFk9CQ8l2EWk791rKBwLK0iloJBmvwv/5Mf+z4QWU5ZPQOPJOYzo94mO2S0oCSgAKGkb2eaDNOPTTz7H/3KcIKCFIaBCZA7o7P1lullGogBKDgsaQM6C79jrSYRg6x7QmASUKBY0gW0CvZjL9/j7LBXkBJQyD0ADyzgPtDDq3AgoPKejyZbwT6WL6UnUQP8d0JgElEgldulwBnemq+zUBJRQFXbg8AR3tFs7f35sD/13aXCgBJRgJXbRY64Fum3tB96e5UH3Powoo0SjokuUZgV4MFbfJZz+3zaiz7WfvQaiAEo+ELtcsAU28/v7r63H6fX1O9bCJejppv20JKAEp6GLlD2j6DNBtM4t0d76Nad9zPr6AEpKCLtTEAe3cutmRdghfjTdfmh/PBe55PkBAickgdJkmDuhp+aVLaTdxVtt6bX48R3PXbzgroASloIs09SH8frR+dgN6XohkL6CshIQu0AwXkVJVh+7fmh8FlBVS0OUJFNC3bRPO7cUhvHOgrIaELk2kifT7Ztbnr6/t0+lOo9JnCSihKejCRApoPe3zMAY9Xzna9pxJL6AEp6CLMm1A64vwr7eX4lMXsqtn0h8O2Ztu7ntfkRJQojMIXZJQAT0W9ELPB4MIKOEp6ILECmj7ePmTvss8CSgFkNDFiHQO9Oic44QbmgSUEijoUsQL6CACShkkdBkEFCJS0EXIG9D6ItAcj0JqCSjFkNAFyBTQ39/rbh4vos/5eCQBpRwKOr88Ad0frrzXE+EHXoS/ViXZvfCsloLOLUtA65FnNe481m6XvBzTHQLKqhmEzixLQJsl5Jt0bvvOfn9AQFk3BZ1XjoBWh+71GdDqh+YGzBGP4XsSUEojoXPKs5zd4Y6h08OQBBRGpKAzyhjQfXPnuoDCqCR0NhkDen6o5nxTQQWUEinoXDKdA/12PgV68UijBOflRBI2I6CUSULnkeUq/GH5zt3xJqR6SlPfNZTOrh+T3LehAkqhFHQW2eaBNovPbdNWUbrcTvrKeAJKsRR0BnnuRNq1y8/tBtyIdLiTqfPqw8J2/WosoJTLIDS/TPfC7zftJfj04/f9TS7rpPbanoBSMAXNLtJydtvbwWvfK1ICStEkNLNAAb37CGPPhYcOBc0rUECb6aSXes7KF1BKJ6E5ZQro5fXztMtIAgpPUNCMcl6FHxhQh/DwFAnNJktA9+M81thFJHiKguaS6U6kUdYPuT+NqdfqzALKOihoHpnuhR9l/aW7E+n7bVlAWQmD0CwyrcY0zkM8DsW81PMJdQLKWihoDqEC2l2KyWIi8JiETi/fcnZjsZwdPEdBJ5fpoXLzLaF8SUBZFQmdWJaAjngMP5CAsi4KOq08E+l/fR17DHq4It8/ywLK2ijolDJdRBplIv3bcUp+neJ94pYElNUxCJ1QqIAeh52bTz/Pt9Y/3NTNpKeNgLI+CjqdUAE9XYD/8q9mG9vHK9ILKNQkdCqBlrOrz6TW2TysTNJ0c29FeviYgk4kUkB3zdB1e74BqTqot5gIfExCJxEooO18/O41fcvZwVMUdArZAlqfCK2fDp8+naldULk77LSgMjxJQseXKaDH60h1QHuetLzcRvPSrYBCfwo6ujwBba7DVwGtL6QnFvR8P9O2ewgvoPAsBR1ZloDW8ze//PPra33pJ31x5Wort8f/WxeR4HkGoePK9UiPb/W1n8O1813CHZhHdw7/91akhz4UdFSZHulRDx2bgN4dSD6lPhHwcv0JK9JDLxI6oozrgTYB7XvasuNwB/x5ELrd9D6hKqCgoOPJdCtnnblTQHteOO/aXzzDY9f/gpSAgoSOJ1ZAq1Fn57W7/mvSCyi8KehoZjiE3864Pr2AwoGEjiLTRaR63NgEtBqPJjzMaCQCCkcKOoZc05heTgGt54Sm3ot04KFyMAoFHS7PnUiH2fOHgO42j5fw/MDuanVPjzWGZAahg2W9lXPYcsqHZZiu9dyYgMKZgg6VaTGR5mEcw/p52Ejn5Ycs9xvOCih0Segw2ZazaxI6YAZTfSr1Kpe9T6gKKFxQ0EECLajcXMy/0PeSvoDCFQkdIFBA2xXpu6xIDwMpaLpAAT0vqNxhQWUYTEJTCSigoImmDejNE+GHXIh3CA+TUdAkgQLqIhJMxyA0RaSA3p/GZEV6GIOCJshzDvS8jmed1NRb4e9OpLciPYxEQnvLEtBfXzvjxH13TeR+7gxoe25LQOF9CtpXpuXsXt79WT/bq35aTATGJKH9ZFyR/mTQivSWs4MpKWgv8QI6iIDCByS0h0yP9Lg8hPdID1guBX1epnOgnSHoLunYeyQCCh9T0Gflugp/OmyvP0y+Cj+cgMITDEKflGce6OWTOAY9EmkYAYVnKOhzMi0msk+euTkuAYXnSOgzsq3G1EyCn+8C/IGAwpMU9AmxlrMbfGO9gMLTJPRDAgq8Q0E/Eiig955qLKAwJQV9LFJAD2PQXqvX3RBQ6MUg9KFQAa0LOuwivoBCPwr6SKyA1kfxg+4DFVDoS0LfFyyg9ZT8IfPwBRR6U9B3RQtodRA/ZAgqoJBAQt8RLaADh6ACCikU9L5wAR1GQCGNhN4joMAzFPQOAQWeo6A3BBR4kkHoNQEFnqWgVwQUeJ6EXhBQoAcF7RJQoBcJPRNQoB8FbQko0JeENgQU6E1BjwQUSCCgNQEFSCSgAIkEFCCRgAJDfW7M/XVkJ6DAQJ8/r7WgAgoM04ZzfQUVUGCQTjYFdPgWx97gmAQUxtat5toKKqDAIAI66hbH3uCYBBTGJqCjbnHsDY5JQGFsAjrqFsfe4JgEFMYmoKNucewNjklAYWwCOuoWx97gmAQUxmYa06hbHHuDYxJQGJ2J9GNucewNjklAYXxu5Rxxi2NvcEwCChNYaz8FFCCVgAIkElCARAIKkEhAgSms4pKSgAJTWMVVeQEFJrGGggooMJHyCyqgwFSKH4QKKDCZ0gsqoMCEyi6ogAJTKnoQWnRAN3fM/TXB2pRcUAEFJlZuQYsO6C0BhRkUOwgVUGBypRZUQIEMyiyogAI5FDkIFVAgixILKqBAJuUVVECBXIobhAookE1pBRVQIKOyCiqgQE5FDUIFFMiqpIIKKJBZOQkVUCC3YgoqoEB+hRRUQIEZlDEIFVBgDkUUVECBeRRQUAEFZhJ/ECqgwFzCF1RAgfkEL6iAAjOKPQgVUGBOoQsqoMC8AhdUQIGZxR2ECigwt7AFFVBgfkELKqDAAsQchAoosAQhCyqgwDIELKiAAgsRbxAqoMBShCuogALLEaygAgosSKxBqIACSxKqoAIKLEugggoosDBxBqECCixNmIIKKLA8QQoqoMACxRiECiiwRCEKKqDAMgUoaLCA/vq62Wy+/NP+/M+PzV9/93i9gEIcyx+ExgrodnP0cvqEgELBFl/QUAE99fM8CBVQKNrCCxopoPXx+2v14+5cUAGFsi17EBopoNvNp5+HD6psNgUVUCjcogsaKKBVLNtzn9umoAIKxVtwQQMF9Pf3wwH8UVNQAYXyLXcQGjWgdUFfBBRWYbEFDRvQ+jzoNwGFdVhoQQMFtHsO9PjTzauAwjoscxAaKKD19KXOELSe1fTpPwUU1mGRBY0U0Hoe6LfOz/eHOfUCCuuwwIJGCuhhBn33MH4voLAiyxuEhgrooaDdMWg9JhVQWIvFFTRWQOsrR98uPrETUFiRhSU0WECHElCIbVkFFVAglCUVVECBWBY0CBVQIJjlFDR4QH99dREJ1mcpBRVQIJ6FDEIFFAhoGQUNHtC+BBRKsYSCCigQ0wIGoQIKBDV/QQUUCGvugsYL6Pnh8C8f/+ZrAgpFmXkQGiygu82lvg0VUCjLvAUNFdB69borvSYxCSiUZ86CRgpo/RSkbjF/f980j4d/moBCcWYchEYK6P4ml4cHy/XZhIBCeeYraKSAbm8P2KtBaK/ToAIKJZqroIECerMafW3X7xheQKFIMw1CAwW0Gm3eHq7v3QsPzFVQAQWKMEdBAwXUITzwwAyD0EABdREJeCR/QSMF9P40pttR6QMCCiXLXdBIAb07kb7frUgCCkXLPAiNFNBjMS99+tlrCwIKZctb0FAB7S7FZDER4J6cBQ0W0DfL2QGPZRyExgvoIAIK5ctXUAEFipOroFEDergi328KU01AYRUyDUKDBXTfrAC6T1tPWUBhJfIUNFRAj8POzaef56XpHxb0ZtLTRkBhLXIUNFRATxfgv/yrKef28Yr0AgorlmEQGimg1bizzubhwXJNN/dWpAfeMX1BIwV01xywb883IFUH9RYTAd4xdUEDBbRdzq4aibYH7pazA9438SA0UEDbBZW7w04LKgMPTFvQiAGtjuEFFHjOlAWNFdBm4vy2ewgvoMAjEw5CAwW0OnK/Pd+5dREJeGy6ggYKaD1/6XrO0t6K9MCHpipopIDW6ym/XH/CivTAhyYahEYK6PEO+PMgdHv502cIKKzTNAUNFdC6oJ1neOx691NAYbWmSGisgFajzs4h+67/mvQCCqs1QUGjBXQgAYUVG72gAgqsxtiD0HgB9VA5INXIBQ0W0J3HGgNDjFrQUAE9L0Tf6vlMDwGFtRtzEBopoIcnenSKWc+j77eanYACIxY0UkD3N7msk2pFeqCf0QoaKaDb2wP2ahBqMRGgp7EGoYEC2q5I32VFeqC/kQoaKKDnBZU7LKgMpBiloAIKrNIYg9BAAXUID4xohIIGCqiLSMCoBhc0UkDvT2OyIj2QaOggNFJA706ktyI9kGxgQSMF9FjMS531lZ8hoMCFQQUNFdDuUkwWEwHGMGQQGiygb5azA8Y1oKDxAjqIgAI3BPQ5AgqMR0ABEgkoQCIBBej43Hjm9woowNnnzz0KKqAArTacTxU0UEDv3IfU+7FyAgo80MmmgN5+cQIKvK9bzScKGiig955qLKDAiAoO6GEM2mv1uhsCCjxQckDrgvZcfumKgAIPFB3Q+ii+1yM8rgko8EDZAX3bbe48We55Ago8UHhAq4P4IUNQAQUeKHca09GwIaiAAo8UO5F+DAIKPORWzvcJKPCYxUTeJaDAeAQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAotUFFGA8ozdq7A2OaUj8IDQAAAq2SURBVO6/bKAsozdq7A3Ooqhj/ZJ2pqR9sTOLNePOlPHX6N2wUCXti51ZLAEdyLthoUraFzuzWAI6kHfDQpW0L3ZmsQR0IO+GhSppX+zMYgnoQN4NC1XSvtiZxRLQgbwbFqqkfbEziyWgA3k3LFRJ+2JnFktAB/JuWKiS9sXOLJaADuTdsFAl7YudWSwBHci7YaFK2hc7s1gCOpB3w0KVtC92ZrEEdCDvhoUqaV/szGIJ6EDeDQtV0r7YmcUS0IG8GxaqpH2xM4sloAN5NyxUSftiZxZLQAfybliokvbFziyWgA7k3bBQJe2LnVksAR3Iu2GhStoXO7NYAgoQj4ACJBJQgEQCCpBIQAESCShAIgEFSCSgAIkEFCCRgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQFBPT3903l29xfxjh+fa135tPPub+O0VQ79Dr31zCKff0PU8i+HN9lL3N/GYP9/v7X392fzRCC+AHdbo5KiM7xLVDrvjEiq/eohOgck1PGP8yfH6d3WfB/mWpHOv8c84QgfEB3m3Kac+5nCXtzsI3/bVpr+7nZfPln7i9mqO35XRb7n2bb/TaZKQTRA1q/s+u39L6EQ5Ld6QhkW8Le1Pbxv0tr9f9sh3C2/0KBnb5V6p2K/N/0YSDd7sBcIYge0O3pr6v6C4x+EN853N3Ffm+fHIfU8QO6awee+/hD0O3p/4DYp1eOBwXtd8lcIQge0Oo9cPor3IUfG+zP/3fW/7vGfW+f1Oeo/lcBO1Ltx+l7svNhVNt2DwJ/yxz+a/738znQ2UIQPKDVfzcv5w+Djw26//LbArpT79DrroAd6bzLCnAR0Kj/NvW5lNfORaTZQhA8oJ3mXF6Si24bfqBzeCd/i/xN2trHHand0X7PRB5N7+pedr7lZwtB/ICevj0jvx1uVEckwYfTh3+Qah9KCOhhH46Tf8Lvy/Ho96XzY1yXAZ0nBMED2j3SLWHQdhL47FTr+O9RQkDrPdnNMUdmGufZcrH72Q3obCEIH9Dz31VBAY1/Prc97i0koP+tqAm62xJmgV4FdKYQFBXQ8O+IRtXP8N+mp5MQBQT0ePB+2JsiphufJ9IHH3G8G9CMb7miAhr8/XCyL2GYs232oZSANmdUCphuvG32pt6t2PtiBDpYiQEtop9tNwsIaJ2c9oxK+OOczn8Bu+B3BQjoYAVehd8Gf1cfnKflFRLQ9pJe+ClNlxN+Qn/LuAo/2L60eaD1cVX4k2zdlR2OimlO/IB2x2fB/3frfMvPFoLgAS3qTqS34w2+sb8/j8oKaOceWwFdEHciDVbUvfBFXKI4Kiug3VkR4c+BXh7Ch96ZP+6FH6yk1Zjqd0H4fbgWfJBz1L7LCphhtt90LyKF3pnuwbrVmNKUtB5o9AHBXUUE9PQuO7zNYo+mz5OyurOzYuoG1HqgiQpakX5/edgbvzu1IgLaPSUR/kR7Z3X94DtzcbnIivSJinkm0vlRNQK6OPsyknNwvhc++M54JtIoSnkqZ/eJSAK6ONsijnKOrlZzj+pqwpKncgJEIqAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAIgEFSCSgAIkEFCCRgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAIgEFSCSgAIkEFCCRgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEAZ125z7VveL+D3fwzexG7z0n786+thJ9pP/PmxeR38B1AKAWVccwd0O/zP+/X1r7+bDzt783L7q6yegDKumQO6H/7nnceY1UcdX/45fnbXfsTqCSiT+P19M8tAbYSAtoE89PPTz/rDanfaMWj1ceazEiyWgDKJuAH99fU0AN12h8/Vhk+f382zayyQgDKJuAHdngag9eWjzrZ27UG8ISgnAsokbgK6P5xHfG1/tYrRrj1C3p1/rcrWy8UR882LD4nbt6/dHn7t+PG+OV35Wh9+Hz912OKhfJcvu9zkWfW7v53+mIuTndXXdNqiISgNAWUSVwFtJgNtmk/WAf1/P07XmA65PBWzDmjzuzsF7L64LuH/Pf36+ZpVHbuPAtq+7HqTZ7vT6+ozoO9MWDpHlpUTUCZxGdC2V02x6oD+z+YTn/6zvdb9evyt/376xDFl1y+uSvhvX5vgdq/5f/swoO3LbjbZ/brPR/DvjTPPv4mVE1AmcRHQejB3yNm+GWcexpz1rx8Hn/VHddPqXzq0rf7E6ffevPhw0H4MWP3yb6cPDp/aN5+4G9DTy2432ToPLveb9yu5bTfOugkok7gI6L57/aVOT9u7Q8Laj+oP6oAeP1F9VP/emxd3Tk7u2/6dxouPA3p+2dUmW7v2uP1RQHfvHt2zLgLKJC4C2hmwHQNXB/T19PuaX2te0WTz+LL69968uPn8/T/vcUDby0PXm2ydf2l/PTjtuH4VayWgTKIb0O4pw8NF9s6v3nx0yt1bk7DbF9clvBr/Haa8PxHQNtrXm+xs6PRlPxqBXr2K1RJQJnEV0K4qS48Der7r/DSj6eLFl2cg9+0vfRzQ81j3epMnnYB2Sn5DQDkSUCbRDWjnmnffgH755/bF3YB2f/XpgN7Z5EknoDenRzsexZU1EVAmcRXQq9z0GIHeadU5oKex5F9/P3UO9BzQ9/LXCejNPND95vIrAwFlGleH8LezLXucA72ejnkO6G5zvZ0nD+Hfm+HZCWjn3s3TH9teORJQjgSUSXQjdXtPz+OAnl64bWbEX18yakvYqeT+6hD+srKXAX1wj9H16YHOtfZ9Z9K9q/AcCSiTuBjlnQeK52lMDwLajO6alN68+F5A62P564A2m2nnnN4buN6ksDvDs77N6WI1pm/3fhdrJqBM4iKgh1OVh+JsN6eJ9I8C2t7X/nLvxZ0SbpsSHu7oPN1bdDzuPtVv314nujp1erHJVvc29+N6yq/tK84H9O5E4khAmcTlecbzXKNj1R4H9N8uV/q4fvHlZPezwyePV9hfu3OV/vv364DebrJVRfPcycv5Thf/IbgIT01AmcR7qzG1t64/ugq/vyzW1Yu7JdyefuW/NOc1j6PGduhZf/z7NqA3mzzbXQwu2+1fr67nFCg1AWUSN1e6d90KfTSN6dC313defKeE386TjA4FfWl+32FYei+g15s8u16qbneTz3pL1gPlQEBZltlnCG0/PDy3Ij0nAsqyzB7Q8zOR3mNBek4ElGWZPaAfPrbYAJSWgLIs8we0CuTDIajnwtMSUJZl/oBWX8KjQ/RfX80B5URAWZYFBLQaY77/Jfz54SYkWgIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAIgEFSCSgAIkEFCCRgAIkElCARAIKkEhAARIJKEAiAQVIJKAAiQQUIJGAAiQSUIBEAgqQSEABEgkoQCIBBUgkoACJBBQgkYACJBJQgEQCCpBIQAESCShAov8PxXXmYVUFiZ4AAAAASUVORK5CYII=" title alt width="672" /></p>
+<div id="a" class="section level4">
+<h4>2a</h4>
+<p>Percentage volume increase on heating from 4 to 8 degrees</p>
+<pre class="r"><code>v8&lt;-sw[which(sw$T==8),3]
+v4&lt;-sw[which(sw$T==4),3]
+dv&lt;-(v8-v4)/v4
+dv</code></pre>
+<pre><code>## [1] 0.0005356909</code></pre>
+</div>
+<div id="b" class="section level4">
+<h4>2b</h4>
+<p>Assuming the ocean depth is on average 4 km, use your previous answer to estimate the global sea-level rise (in meters) for a 4C change in ocean temperature.</p>
+<pre class="r"><code>4000*dv</code></pre>
+<pre><code>## [1] 2.142764</code></pre>
+</div>
+<div id="d" class="section level4">
+<h4>2d</h4>
+<p>The total amount of ice in the Greenland ice sheet is estimated to be 2.85 million cubic km.</p>
+<p>Assume the Earth’s surface is 70% covered by ocean, and that the Earth’s radius is 6300 km. How many meters would sea level rise if the entire Greenland ice sheet were to melt?</p>
+<p>(You may further assume that the density of ice is 916.9 kg/m3, and that once melted it attains the density of fresh water at 0 C, 1000 kg/m3.)</p>
+<pre class="r"><code>vIce&lt;-2.85e15 #volume of ice m3
+rhoIce&lt;-916.9 #density of ice kg/m3
+mIce&lt;-vIce*rhoIce # mass of ice
+rhoWater&lt;-1000 # density of water kg/m3
+vMeltWater&lt;-mIce/rhoWater # volume of melt water
+aOcean&lt;-0.7*4*pi*(6300e3)^2 # area of oceans
+dh&lt;-vMeltWater/aOcean # increase in sea level
+dh</code></pre>
+<pre><code>## [1] 7.484759</code></pre>
+</div>
+</div>
+<div id="the-montreal-protocol-and-cfcs" class="section level3">
+<h3>THE MONTREAL PROTOCOL AND CFCS</h3>
+<p>The Montreal protocol was an international agreement to limit the production of gases that deplete the ozone layer, signed in 1987. An important class of ozone depleting gases are Chlorofluorocarbons, or CFCs. As well as their ability to destroy ozone in the stratosphere, they are very strong greenhouse gases. In this problem we explore some of the properties of the most common CFCs.</p>
+<p>Consider a simple model for the evolution of the concentation of a certain gas in the atmosphere,</p>
+<p><span class="math display">\[\frac{dC}{dt} = E - \frac{C}{\tau}\]</span>,</p>
+<p>where <span class="math inline">\(C\)</span> is the concentration of the gas [Tg], <span class="math inline">\(E\)</span> is the emission rate [Tg/yr], and <span class="math inline">\(t\)</span> is time [yr]. The time-scale <span class="math inline">\(\tau\)</span> [yr] represents the lifetime of the gas in the atmosphere, before it is removed, either by chemical reactions or deposition to the surface.</p>
+<div id="a-1" class="section level4">
+<h4>3a</h4>
+<p>The common CFC Trichlorofluoromethane (CCl3F), also known as CFC-11, has an atmospheric lifetime of approximately 55 years. Suppose that all emission of CFC-11 ceased on January 1, 1988, a few months after the signing of the Montreal Protocol. Using the simple equation given above, find what year the concentration of CFC-11 would be reduced to one-fifth of its concentration at the beginning of 1988.</p>
+<pre class="r"><code>tau&lt;-55
+C88&lt;-1
+Ct&lt;-function(t,tau,C0){
+    C0*exp(-t/tau)
+}
+dt&lt;--tau*log(0.2)
+dt</code></pre>
+<pre><code>## [1] 88.51909</code></pre>
+<pre class="r"><code>Ct(dt,tau,1)</code></pre>
+<pre><code>## [1] 0.2</code></pre>
+<pre class="r"><code>dt+1988</code></pre>
+<pre><code>## [1] 2076.519</code></pre>
+</div>
+<div id="b-1" class="section level4">
+<h4>3b</h4>
+<p>Another important CFC is Dichlorodifluoromethane (CCl2F2), or CFC-12. This gas has a longer life-time of 140 years in the atmosphere. Assuming the emission of this gas is also reduced to zero at the beginning of 1988, calculate the concentration of CFC-12 as a fraction of its value in 1988 in the year that was the answer to the previous question. That is, find the concentration of CFC-12 when the concentration of CFC-11 is one fifth of its 1988 value.</p>
+<pre class="r"><code>Ct(dt,140,1)</code></pre>
+<pre><code>## [1] 0.5313793</code></pre>
+</div>
+<div id="d-1" class="section level4">
+<h4>3d</h4>
+<p>CFC-11 and CFC-12 are very potent greenhouse gases. Suppose the emission of 1 Tg of CFC-11 causes a 1.0 W m-2 instantaneous perturbation in the radiation budget. The emission of the 1 Tg of CFC-12 causes a 1.5 W m-2 radiative forcing.</p>
+<p>The 100 year global warming potential for CFC-11 is estimated to be 4750. Global warming potential is a measure of how much energy would be trapped by the emission of one molecule of a given gas over a specified time period, in this case 100 years, relative to CO2. Global warming potential depends on both the atmospheric lifetime of a gas, as well as its ability to absorb infra-red radiation.</p>
+<p>Use the information on the lifetimes and relative radiative forcing strengths of CFC-11 and CFC-12, as well as the global warming potential of CFC-11 to estimate the global warming potential of CFC-12. You may assume that the radiative forcing of each species is simply proportional to its concentration.</p>
+<p>Hint: Use the model from part (a) to calculate the total energy absorbed by the instantaneous injection of 1 Tg of each CFC into the atmosphere over 100 years. The ratio of these two energies is the ratio of the global warming potentials.</p>
+<p><span class="math display">\[\begin{align*}
+C&amp;=C_0 \exp\left(\frac{-t}{\tau}\right)\\
+R&amp;=R_0 \exp\left(\frac{-t}{\tau}\right)\\
+R_{100}&amp;=R_0 \int_0^{100}\exp\left(\frac{-t}{\tau}\right)~dt\\
+&amp;=R_0\tau\left[1-\exp\left(\frac{-100}{\tau}\right)\right ]
+\end{align*}\]</span></p>
+<pre class="r"><code>CFC11_tau&lt;-55
+CFC11_rf&lt;-1.0 # Wm-2 per Tg
+CFC11_gwp100&lt;-4750 
+
+CFC12_tau&lt;-140
+CFC12_rf&lt;-1.5 # Wm-2 per Tg
+# average concentration ratio over 100 years
+c12c11ratio&lt;-(CFC12_tau/CFC11_tau)*(exp(-100/CFC12_tau)-1)/(exp(-100/CFC11_tau)-1)
+CFC12_gwp100&lt;-CFC11_gwp100*c12c11ratio*CFC12_rf/CFC11_rf
+CFC12_gwp100</code></pre>
+<pre><code>## [1] 11051.79</code></pre>
+<p>See <a href="http://www.ghgprotocol.org/files/ghgp/tools/Global-Warming-Potential-Values.pdf" title="GWP list">GHG protocol list of GWPs</a></p>
+</div>
+</div>
 
 
 </div>
