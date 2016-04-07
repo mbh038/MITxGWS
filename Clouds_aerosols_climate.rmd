@@ -1,0 +1,49 @@
+---
+title: "Clouds, aerosols, and climate"
+author: "Michael Hunt"
+date: "7 April 2016"
+output: html_document
+---
+
+## PROBLEM 1: ABSORBING AND SCATTERING AEROSOLS
+
+### 1a
+
+A proposed geoengineering mechanism to reduce the effects of climate change is to pump sulfate aerosols into the stratosphere in order to reduce the amount of solar energy absorbed by the Earth system. Sulfate aerosols are good scatterers of solar radiation, and thus increase the albedo of the atmosphere reducing the amount of solar radiation absorbed by the planet.
+
+Suppose we would like to use sulfate aerosols to reduce the effective emission temperature ($T_e$) of the planet by 3.0 degrees Celsius. What additional percentage of the incoming solar radiation must sulfate aerosols reflect to achieve this? You may assume that the solar constant is 1370 W/m2 and the planetary albedo of the Earth before geoengineering commences is 0.30.
+
+The emission temperature of the planet is given by,
+$$\sigma T_e^4 = \frac{S_0}{4}(1-\alpha_p)$$
+Before geoengineering commences, the emission temperature is 255 K. In order to reduce the temperature to 252 K, we require the geoengineered albedo $\alpha_E$ to satisfy,
+$$(5.67\times10^{-8}\textrm{ W m}^{-2}\textrm{ K}^{-4})(252 \mbox{ K})^4 = \frac{1370 \mbox{ W/m}^2}{4}(1-\alpha_E)$$.
+Solving this equation gives $\alpha_E=0.3323$. The increase in the albedo required by scattering from sulfate aerosols is roughly 3.2%.
+
+### 1b
+
+Sulfate aerosols are very efficient scatterers of radiation. Scattering efficiency is often measured by the scattering cross-section per unit mass, which for sulfate aerosols is 8130 m2/kg. We can think of this number as stating that 1 kg of sulfate aerosol in the atmosphere, if it is well-mixed, is equivalent to placing a mirror in the atmosphere, 8130 m2 in size and parallel to the surface, that completely reflects solar radiation. In reality the value of the scattering cross-section is wavelength dependent, but for this simple calculation we will assume all solar radiation is scattered equally, and all scattering is in the backward direction.
+
+Based on the given properties of sulfate aerosols, calculate the global mass of sulfate, in kg, that must be placed in the atmosphere to increase the albedo by the amount found in the previous question (part a).
+
+When entering numerical values you may use the notation 5.67e-8 to refer to $5.67\times 10^{-8}$ when scientific notation is needed. Using traditional notation will also be accepted.
+
+Answer:
+
+
+
+### 1c
+
+Aerosols in the stratosphere have a lifetime $\tau$ of approximately 2 years. As in problem 3 of the week 4 problem set (Problem Set 3), we assume a simple model for the time rate of change of the total mass $M$ of stratospheric aerosols,
+$$\frac{dM}{dt} = E - \frac{M}{\tau}$$,
+where $E$ is the injection rate of aerosols [kg/year]. Based on this model and the answer to the previous question, at what rate would aerosols need to be injected into the stratosphere to keep the albedo of the Earth at the required level to offset 3 degrees Celsius of global warming in steady state?
+
+Express your answer in kg/year. Note that the total injection rate of sulfate aerosols into the troposphere by human activity is around 80e9 kg/year.
+
+Enter your answer below as a number of kg/year. Do not include units in your answer.
+
+Answer:  
+In steady state balance the equation above reduces to,
+$$E = \frac{M}{\tau}$$.
+The value of $E$ may be found by substituting $\tau$=2 years and $M$=2.01e9 kg.
+
+This required emission rate is very small, because stratospheric aerosols are extremely long-lived, and because when aerosols are placed in the stratosphere, they can reflect sunlight before it has been absorbed by other gases in the Earth's atmosphere.
