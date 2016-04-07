@@ -1,11 +1,13 @@
 ---
-title: "Atmospheric Circulation"
+title: "MITx12.340x Global Warming Science: Atmospheric Circulation"
 author: "Michael Hunt"
 date: "March 30, 2016"
 output: html_document
 ---
 
-## Problem 1: Hadley Cell
+## PROBLEM 1: HADLEY CELL
+
+In this problem we look in more detail at the Hadley circulation. We consider the hypothetical radiative-convective equilibrium solution described in the lecture videos, show that it cannot exist, and outline an angular momentum conserving conserving solution that better describes the observed circulation.
 
 ### 1a
 
@@ -18,8 +20,7 @@ Here $a$ is the radius of the Earth, \Omega is the angular velocity of the Earth
 
 The angular momentum of a parcel at rest (i.e. when u=0) increases as one moves toward the equator. If the circulation of the atmosphere is zonally symmetric, angular momentum is conserved. Under these conditions the maximum angular momentum achievable by any parcel is that of a stationary parcel at rest at the equator. The maximum velocity of such a parcel at any given latitude is the velocity it achieves if it conserves its angular momentum starting from rest at the equator. Write an expression for this maximum velocity, which we will denote $u_M$, as a function of the latitude $\phi$.
 
-Answer:
-
+_Answer:_  
 The angular momentum for a parcel at rest at the equator is given by,
 
 $$M=a^2\Omega$$
@@ -52,6 +53,15 @@ $$2\Omega\sin\phi\frac{\partial u}{\partial z} = -\frac{g}{a}\frac{\partial \ln(
 
 Using the expression for $\ln(T)$, find an expression for the zonal velocity at the tropopause, where $z=H$, that is in thermal wind balance with the radiative-convective equilibrium solution for the temperature. We denote this velocity $u_T$. You may assume that the winds at the surface are negligible.
 
+_Answer_  
+Taking the derivative of the equation for the radiative-convective equilibrium temperature field (the first equation above) with respect to latitude, we have
+$$\frac{\partial \ln(T)}{\partial \phi} = -2\Delta_H \sin\phi\cos\phi$$
+Substituting this into the thermal wind equation gives
+$$\frac{\partial u}{\partial z} = \frac{g}{\Omega a}\Delta_H \cos\phi$$
+Integrating from the surface to the tropopause at $z=H$ we have,
+$$u(z=H) - u(z=0) = \frac{gH}{\Omega a}\Delta_H \cos\phi$$
+Since the surface wind is small, we can neglect the term $u(z=0)$, thus giving the desired result.
+
 ## PROBLEM 2: GEOSTROPHIC BALANCE AND THERMAL WIND
 
 ### 2a
@@ -60,16 +70,16 @@ Using the expression for $\ln(T)$, find an expression for the zonal velocity at 
 
 The weather map above shows the surface pressure (black lines) over North America, as analyzed for a numerical weather prediction model on February 3, 2014. Based on geostrophic balance, what is the direction of the wind near the surface at the location of the red "X" on the figure?
 
-Answer:  
+_Answer:_  
 Northerly
 
 ### 2b
 
 The location of the "X" is close to the border of the Canadian state of Manitoba and the Northwest territories. This is at 60. degrees North. You may assume the density of the air near the surface is 1.2 kg/m3, and that the surface pressure at the location of the "X" varies 12 hPa over a distance of 500. km.
 
-Remember to use SI units for all variables, and that the angular rotation velocity of the Earth is 7.29×10???5 s???1.
+Remember to use SI units for all variables, and that the angular rotation velocity of the Earth is 7.29?10???5 s???1.
 
-Answer:  
+_Answer:_  
 The geostrophic wind equation is given by,
 $$2\Omega v\sin\theta = \frac{1}{\rho}\frac{\partial p}{\partial x}$$
 Solving for the meridional wind speed $v$ gives
@@ -101,7 +111,7 @@ and the ideal gas law,
 $$p = \rho R T$$
 to express this height difference in terms of the temperature, $T$, gas constant $R$ and gravity $g$. You may assume the temperature to be uniform in the vertical.
 
-Answer:  
+_Answer:_  
 Combining the hydrostatic relation and the ideal gas law we have,
 $$\frac{1}{p}\frac{d p}{d z} = -\frac{g}{RT}$$
 Integrating between the 1000 hPa and 500 hPa isobars,
@@ -127,7 +137,7 @@ The secondary cells shown in the figure exist in the mid-latitudes and are calle
 
 Use the figure above to estimate the maximum value of the annual-mean mass flux, in kg/s, of the Southern Hemisphere Ferrel cell. This is the amount of mass that the Ferrel cell moves meridionally through the mid-latitudes in each direction.
 
-Answer
+_Answer_  
 $5\times 10^{10} \text{kg/s}$ - the maximum value in the cell
 
 ### 3c
@@ -140,7 +150,7 @@ where $c_p$ is the specific heat capacity of air at constant pressure, $T$ is th
 
 Assume the temperature in the upper branch of the Ferrel cell is 30.0 K colder than the lower branch, while the mean altitude of the upper branch is 8.00 km and the mean altitude of the lower branch is 1.00 km. Finally, assume the lower branch has a mean specific humidity of 0.010 kg/kg, while the upper branch has negligible water vapor. Based on your answer to part B, what is the absolute value of the mean energy transport at mid-latitudes by the Ferrel Cell?
 
-
+_Answer_  
 ```{r}
 cp=1004
 g=9.81
@@ -182,8 +192,7 @@ The energy flux by such a circulation may be estimated by the integral,
 $$F_E^{eddy}=a H\int_0^{2\pi} \rho v\Delta E d\theta$$
 where $a$ is the radius of the Earth (6368 km), $\rho$ is the density of air (which we assume to be 1.00 kg/m3), and H is the depth of the circulation, which we take as 5.00 km. The quantity $\Delta E$ is the deviation of the energy content of the atmosphere from the zonal mean. Estimate the heat transport by this circulation assuming the moisture content of the atmosphere does not vary with longitude.
 
-Answer
-
+_Answer_  
 At a given height level, the deviation of the energy content from the zonal mean may be written,
 $$\Delta E = c_p\Delta T \sin{( 5\theta )}$$
 Thus, the total eddy energy flux is given by the integral
@@ -209,8 +218,7 @@ F/1e15
 The value found in the above problem is an upper bound, as we assumed the temperature and velocity were completely in phase. Calculate the energy transport in the case where the temperature is not in phase with the meridional velocity, and instead has a cosine dependence on longitude,
 $$T = \overline{T} + \Delta T \cos(5\theta)$$
 
-Answer
-
+_Answer_  
 $$\int_0^{2 \pi} \sin(5\theta)\cos(5\theta) = 0$$
 
 Hence flux is zero. This value is a lower bound.
