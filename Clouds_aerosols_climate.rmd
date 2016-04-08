@@ -19,6 +19,22 @@ Before geoengineering commences, the emission temperature is 255 K. In order to 
 $$(5.67\times10^{-8}\textrm{ W m}^{-2}\textrm{ K}^{-4})(252 \mbox{ K})^4 = \frac{1370 \mbox{ W/m}^2}{4}(1-\alpha_E)$$.
 Solving this equation gives $\alpha_E=0.3323$. The increase in the albedo required by scattering from sulfate aerosols is roughly 3.2%.
 
+```{r}
+sigma=5.67e-8
+S0=1370
+alphaPO=0.3
+
+SolarRad=(S0/4)*(1-alphaPO)
+SolarRad
+Te=(SolarRad/sigma)^(1/4)
+Te
+
+alphaPN=1-4*sigma*(Te-3)^4/S0
+alphaPN
+
+alphaPN-alphaPO
+```
+
 ### 1b
 
 Sulfate aerosols are very efficient scatterers of radiation. Scattering efficiency is often measured by the scattering cross-section per unit mass, which for sulfate aerosols is 8130 m2/kg. We can think of this number as stating that 1 kg of sulfate aerosol in the atmosphere, if it is well-mixed, is equivalent to placing a mirror in the atmosphere, 8130 m2 in size and parallel to the surface, that completely reflects solar radiation. In reality the value of the scattering cross-section is wavelength dependent, but for this simple calculation we will assume all solar radiation is scattered equally, and all scattering is in the backward direction.
@@ -29,6 +45,32 @@ When entering numerical values you may use the notation 5.67e-8 to refer to $5.6
 
 Answer:
 
+$$\alpha_N=x\apha_S + (1-x)\alpha_O$$
+
+where $x$ is the proportion of planet covered in sulfur 'mirrors', $\alpha_N $\alpha_S$ is the albedo of those mirrors and $\alpha_O$ is the albedo of the earth. Since $alpha_N=0.33236$, $\alpha_S=1$ and $\alpha_O=0.3$ we have
+
+$$\alpha_N=x + (1-x)\times 0.3$$
+
+so that
+
+$$\alpha_N=0.7x + 0.3$$
+
+and hence
+
+$$x=\frac{\alpha_N-0.3}{0.7}=\frac{0.03236}{0.7}=0.04623448/$$
+
+```{r}
+cs=8130 # m2/kg
+alphaS=1
+Re=6.370e6
+Ae=4*pi*Re^2
+
+x=(alphaN-alphaO)/(alphaS-alphaPO)
+
+As=x*Ae # effective area of sulphure mirrors required
+me=As/cs # mass of sulphure required
+me/1e9
+```
 
 
 ### 1c
@@ -47,3 +89,152 @@ $$E = \frac{M}{\tau}$$.
 The value of $E$ may be found by substituting $\tau$=2 years and $M$=2.01e9 kg.
 
 This required emission rate is very small, because stratospheric aerosols are extremely long-lived, and because when aerosols are placed in the stratosphere, they can reflect sunlight before it has been absorbed by other gases in the Earth's atmosphere.
+
+## PROBLEM 2: CLOUD RADIATIVE FORCING
+
+In this problem, we will use a simple black-body description of a cloud to investigate how clouds modify the global energy budget, and are a potential source of both positive and negative feedbacks in the climate system.
+
+### 2a  
+
+```{r,echo=FALSE}
+library(rafalib)
+mypar(1,1)
+df<-read.csv("./data/rcm_default.csv")
+
+plot(df$Temperature_C,df$Pressure_mb,type="l",
+     col="blue",
+     lwd=3,
+     xlab="Temperature (deg. C)",
+     ylab="Pressure (hPa)",
+     main="Temperature Profile",
+     ylim=c(1000,0)
+)
+grid(lwd=2)
+```
+
+The figure above shows a temperature profile using pressure as the vertical coordinate calculated using the [Radiative-convective equilibrium model](https://rcmodel.mit.edu) available in the Resources section for the default parameters. Suppose there exist some clouds in this domain. We may divide the clouds into two types: _deep_ and _shallow_. The deep clouds have tops near 300 hPa, while the shallow clouds have tops near 800 hPa. All clouds have their base at 900 hPa.
+
+We may model the clouds as simple black bodies, radiating upwards at the cloud-top temperature, and downwards at the cloud-base temperature. Estimate the radiative flux at the top of the atmosphere in W/m2 in a region covered by deep clouds. You may assume there is no significant absorption or emission of radiation by the atmosphere above the tops of the deep clouds.
+
+Answer: 130 W/m2  
+
+We assume the clouds radiate upwards as black bodies. From the temperature profile, the cloud top temperature (at 300 hPa) is about 220 K. Using the Stefan-Boltzmann equation,
+$$F=\sigma T^4$$,
+gives the desired result.
+
+```{r}
+sigma=5.67e-8
+T=273.15+ (-53)
+F=sigma*T^4
+F
+```
+
+### 2b
+
+The tops of the shallow clouds are relatively low in the atmosphere, and so the assumption that the top of atmosphere radiative flux is the same as that at the top of the cloud is not a good one. Instead, for the shallow clouds, we assume that they are low enough in the atmosphere that the top-of-atmosphere long-wave radiation is unaffected. Assuming that the effective emission temperature for a cloud-free atmosphere is 255 K, estimate the top-of-atmosphere upward long-wave radiative flux above cloud-free or shallow cloudy regions in units of W/m2.
+
+Answer:  
+The effective emission temperature is defined so that the top-of-atmosphere long-wave flux is given by,
+$$F=\sigma T_e^4$$.
+This results in a value of roughly 240 W/m2.
+
+```{r}
+sigma=5.67e-8
+Te=255
+F=sigma*Te^4
+F
+```
+### 2c  
+Shortwave radiation is also affected by clouds. Assume that in cloudy regions, the planetary albedo is increased to 0.600, while for cloud-free regions the planetary albedo is 0.200. Calculate the __net shortwave__ radiative flux at the top of the atmosphere in a region covered by clouds (downward positive) in W/m2. You may also assume the solar luminosity is 1370 W/m2, and that the geometric factor is given by global-mean conditions, that is, assume the downward solar flux at the top of the atmosphere is given by $\frac{S_0}{4}$.
+
+Answer:  
+The net solar radiation at the top of the atmosphere for global mean insolation is given by,
+$$F_\text{solar}=\frac{S_0}{4}(1-\alpha_P)$$,
+where $\alpha_P$ is the planetary albedo. Plugging in an albedo of 0.600 gives a net top of atmosphere shortwave flux of 137 W/m2 downward.
+
+```{r}
+S0=1370
+alphaP=0.6
+F=(S0/4)*(1-alphaP)
+F
+```
+
+### 2d
+
+Assuming the effective emission temperature in clear regions and regions with shallow clouds is 255 K, use your answers to the previous parts of this problem to calculate the net top-of-atmosphere radiative flux (net downward shortwave minus upward longwave) in clear regions, shallow cloudy regions, and deep cloudy regions. Write these values in W/m2 in the boxes below, with the convention that a downward net flux is positive.
+
+
+Clear Regions:  
+The net flux is the sum of the shortwave (solar) and longwave (terrestrial) fluxes. Over clear and cloudy regions the long-wave flux was previously found to be 240 W/m2 upward. Over clear regions, the albedo is 0.200, so the downward short-wave flux is,
+$$\frac{1370}{4}(1-0.200)=274\mbox{ W/m}^2$$.
+The net top-of-atmosphere radiative flux is thus 34 W/m2  
+
+### 2e   
+Shallow Cloudy regions:  
+For shallow cloudy regions, the upward long-wave flux at the top of the atmosphere is the same as the value in clear regions of 240 W/m2. The short-wave flux, according to part C, is 137 W/m2 downwards. The net flux is thus 103 W/m2 __upward__. LOTS  OF COOLING
+
+### 2f    
+Deep Cloudy Regions:  
+In deep cloudy regions, the shortwave flux at the top of the atmosphere is the same as in shallow cloudy regions: 137 W/m2. The upward long-wave flux, however, is 130 W/m2 (from part A), so the net flux is thus 7 W/m2.  
+### 2g   
+Based on the previous answer, do clouds warm or cool the climate system according to this simple model? Are shallow or deep clouds more effective in modifying the top-of-atmosphere energy balance of the Earth? Would a reduction of shallow clouds in a warmer climate be a positive or negative feedback on climate change?
+
+Answer:  
+Clouds <b>cool</b> the climate, and <b>shallow clouds</b> cool the most. A reduction in shallow clouds would thus be a <b>positive</b> feedback on climate change.  
+
+The net radiative flux at the top of the atmosphere for both types of cloud is smaller than for the clear sky case. Thus, the clouds cool the climate. But the shallow clouds are much more effective in cooling the climate, as they have a strong albedo effect, but weak (in this case zero) greenhouse effect. A reduction in the extent of low clouds in response to warming would result in a lower albedo and thus be a positive feedback on the original warming.
+
+## PROBLEM 3: CLOUD FEEDBACKS
+
+See MIT ONE COLUMN RADIATIVE-CONVECTIVE MODEL at https://rcmodel.mit.edu/
+
+In this problem we again consider how clouds change the radiative budget of the Earth-system. We will use the radiative-convective model in order to investigate how clouds may amplify or damp the response to the global climate to forcings.
+
+### 3a  
+
+Run the radiative-convective model in its default configuration, ensuring that the simulation has been done for long enough to reach equilibrium. Enter the equilibrium sea-surface temperature reached in units of degrees Celsius.
+
+Answer:  
+Make sure to run the simulation for 1000 days to ensure it reaches equilibrium. The value can then be read off the table on the right. The equilibrium SST is 17.2 degrees Celsius (or 290.35 K).
+
+### 3b  
+
+Double the concentration of carbon dioxide and run the model again. What is the climate sensitivity of this model to CO2? That is to say, how much does the temperature change (in Kelvin or degrees Celsius) for a doubling of CO2?
+
+Answer:  
+The equilibrium temperature reached with a carbon dioxide concentration of 720 ppm is 19.5 degrees Celsius, giving a temperature change on CO2 doubling of 2.3 K.  
+
+### 3c
+
+The default model parameters are to not include clouds in the radiation calculation. You can include clouds by clicking the "show advanced parameters" checkbox, and then changing the cloud-radiation option to "interactive clouds". Repeat the calculation in part A with interactive clouds (remember to revert back to default CO2 concentrations). Do clouds have a net cooling or net warming effect on the climate in this model?
+
+Answer:  
+Cooling because the equilibrium temperature for this simulation was higher than that of part A    
+_Warming because the equilibrium temperature for this simulation was <b>higher</b> than that of part A_ - correct    
+Cooling because the equilibrium temperature for this simulation was lower than that of part A    
+Warming because the equilibrium temperature for this simulation was lower than that of part A  
+
+
+The equilibrium temperature when cloud-radiation interactions are included is around 21.5 degrees Celsius, higher than without clouds. This indicates clouds exert a warming influence on the climate _in this model_.
+
+This is different to the global-mean on Earth. On Earth, the aggregate effect of clouds is to cool the climate. The basic reason for this discrepancy is that the Earth has many more shallow clouds than does the model. Shallow clouds occur in regions of subsidence (downward air motion) that are not represented in the simple case of radiative-convective equilibrium. Shallow clouds cool the climate because their short-wave reflection is larger than their greenhouse effect.
+
+NOTE: There is a bug in the model implementation that for certain parameter settings gives an SST that is invariant with time. This could lead someone to choose answer C based on the model results. We have decided to accept this answer as well.  
+
+### 3d  
+
+By performing additional simulations, investigate the cloud feedback in this model. Is it positive or negative?
+
+Answer: 
+
+C: Negative, because the climate sensitivity is lower when cloud-radiative interactions are turned on. - correct   
+  
+Tried ppm CO2 = 360 or 720 (doubled) with and without couds. Find that climate sensitivity to doubling of CO2 is 2.3 K without clouds and 1.8 K with clouds - hence they have a negative feedback effect.
+
+The increase in surface temperature for a doubling of carbon dioxide is smaller when cloud-radiation interactions are turned on than when a fixed cloud distribution is used. Thus, the cloud feedback is negative, damping the effect of a radiative forcing on the climate.
+
+However, for large perturbations, for example a large change in the solar constant, the model may also show a higher climate sensitivity for the interactive clouds case. This would suggest the cloud feedback is positive. For this reason, both C and D are accepted as correct answers.
+
+C: Positive, because the climate sensitivity is higher with cloud-radiative interactions turned on. 
+
+This is not necessarily a failure of the model. It is not inconceivable that the sign of the cloud feedback on Earth depends on the initial climate state.
