@@ -45,7 +45,7 @@ When entering numerical values you may use the notation 5.67e-8 to refer to $5.6
 
 Answer:
 
-$$\alpha_N=x\apha_S + (1-x)\alpha_O$$
+$$\alpha_N=x\alpha_S + (1-x)\alpha_O$$
 
 where $x$ is the proportion of planet covered in sulfur 'mirrors', $\alpha_N $\alpha_S$ is the albedo of those mirrors and $\alpha_O$ is the albedo of the earth. Since $alpha_N=0.33236$, $\alpha_S=1$ and $\alpha_O=0.3$ we have
 
@@ -65,7 +65,7 @@ alphaS=1
 Re=6.370e6
 Ae=4*pi*Re^2
 
-x=(alphaN-alphaO)/(alphaS-alphaPO)
+x=(alphaPN-alphaPO)/(alphaS-alphaPO)
 
 As=x*Ae # effective area of sulphure mirrors required
 me=As/cs # mass of sulphure required
@@ -176,6 +176,7 @@ For shallow cloudy regions, the upward long-wave flux at the top of the atmosphe
 ### 2f    
 Deep Cloudy Regions:  
 In deep cloudy regions, the shortwave flux at the top of the atmosphere is the same as in shallow cloudy regions: 137 W/m2. The upward long-wave flux, however, is 130 W/m2 (from part A), so the net flux is thus 7 W/m2.  
+
 ### 2g   
 Based on the previous answer, do clouds warm or cool the climate system according to this simple model? Are shallow or deep clouds more effective in modifying the top-of-atmosphere energy balance of the Earth? Would a reduction of shallow clouds in a warmer climate be a positive or negative feedback on climate change?
 
@@ -183,6 +184,26 @@ Answer:
 Clouds <b>cool</b> the climate, and <b>shallow clouds</b> cool the most. A reduction in shallow clouds would thus be a <b>positive</b> feedback on climate change.  
 
 The net radiative flux at the top of the atmosphere for both types of cloud is smaller than for the clear sky case. Thus, the clouds cool the climate. But the shallow clouds are much more effective in cooling the climate, as they have a strong albedo effect, but weak (in this case zero) greenhouse effect. A reduction in the extent of low clouds in response to warming would result in a lower albedo and thus be a positive feedback on the original warming.
+
+### 2h
+
+```{r}
+fc=34
+fs=-103
+fd=7
+
+alpha=seq(0,1,.01) # proportion of clear sky
+x=0.1 # proportion of clouds that are shallow
+
+ft=(1-alpha)*(x*fs+(1-x)*fd)+(alpha)*fc
+
+
+
+(1-alpha)*x # fraction of sky that is shallow clouds
+(1-alpha)*(1-x) # fraction of sky that is deep clouds
+
+```
+
 
 ## PROBLEM 3: CLOUD FEEDBACKS
 

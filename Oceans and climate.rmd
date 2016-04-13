@@ -1,0 +1,88 @@
+---
+title: "Oceans and climate"
+author: "Michael Hunt"
+date: "April 12, 2016"
+output: html_document
+---
+
+## Timescales of the Ocean
+
+### 1a
+
+In this problem we consider the time scale over which the upper region of the ocean, sometimes known as the "mixed layer", responds to radiative perturbations. The mixed layer is the region of the ocean that is affected by mechanical mixing driven by the atmospheric winds, as well as potentially convective mixing driven by cooling of the surface over the diurnal or seasonal cycle. A typical depth of the mixed layer is around 50 meters.
+
+Here we construct a very simple model of how the mixed layer temperature evolves toward a steady state after being perturbed. We assume the layer is mixed sufficiently rapidly that it is effectively homogenized in temperature. We denote the mixed layer temperature $T_O$. We consider the simple case in which the only mechanism for the ocean to lose energy is via radiation. The ocean radiates upward as a black body, so that the equation for the ocean temperature may be written,
+$$\rho c_w H \frac{dT_O}{dt} = F_{in} - \sigma T_O^4$$
+
+
+Here $c_w=4.200\times 10^3 \mbox{J/kg/K}$ is the specific heat capacity of water, $\rho=1.000\times 10^3 \mbox{kg/m3}$ is the density of water and $H$ is the depth of the mixed layer in meters. $F_{in}$ is the downward radiation (both long- and short-wave) incident on the ocean, measured in Watts per meter squared.
+
+We may define the equilibrium temperature $T_{eq}$ as the temperature that the mixed layer would need to have to be in energy balance. That is, we define $T_{eq}$ such that,
+$$\sigma T_{eq}^4 = F_{in}$$
+we may then write the governing equation for the mixed layer temperature as,
+$$\rho c_w H \frac{dT_O}{dt} = \sigma T_{eq}^4 - \sigma T_O^4$$
+If we define $\Delta T=T_0-T_{eq}$, and assume $T_{eq}$ does not vary with time, we may write,
+$$\rho c_w H \frac{d \Delta T}{dt} = \sigma T_{eq}^4 - \sigma \left(T_{eq}+\Delta T\right)^4$$
+If the temperature is not too far from its equilibrium value, we may expand this using a Taylor series so that,
+$$\rho c_w H \frac{d\Delta T}{dt} = -\lambda(\Delta T)$$
+with $\lambda=4\sigma T_{eq}^3$. This last step uses a little applied mathematics where we approximate the 4th power dependence of radiation with a straight line. This is valid if the temperature difference $\Delta T$ is small compared to $T_{eq}$; for Earthlike temperatures, this works pretty well even for values of $\Delta T$ as large as $10 C$.
+
+We can think of this equation as governing the approach to equilibrium of the ocean mixed layer after a temperature perturbation of $\Delta T$.   
+
+For an initial temperature perturbation $\Delta T_i$, estimate the time it would take for the temperature of the ocean mixed layer to get half-way to its equilibrium value. That is, esimate the time at which $\frac{\Delta T}{\Delta T_i}=\frac{1}{2}$. Express your answer in days.
+
+You may assume the mixed-layer depth is 50.00 meters, and that $\Delta T_{eq}=290.0 \mbox{K}$.
+
+Enter your answer below as a number of days. Do not include units in your answer.
+
+
+```{r}
+sigma=5.67e-8
+rho=1000
+H=50
+cw=4200
+Teq=290
+
+lambda=4*sigma*Teq^3
+
+thalf=rho*cw*H*log(2)/lambda
+thalf/(24*3600)
+```
+
+### 1b
+
+```{r}
+r=3e6
+v=3e-2
+
+t=2*pi*r / v
+t=t/(365*24*3600)
+t
+```
+
+
+### 1c
+
+```{r}
+v=1e-3
+r=6.37e6
+d=(2/3)*pi*r
+t=d/v
+t=t/(365*24*3600)
+t
+```
+
+### 2b
+
+```{r}
+U0=10
+beta=1.2e-11
+k=0.01
+r=6.37e6
+rho=1000
+H=2000
+lat=45
+L=(lat/360)*2*pi*r
+vmax=k*U0*pi/(rho*beta*H*L)
+vmax
+```
