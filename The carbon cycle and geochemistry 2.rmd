@@ -1,0 +1,119 @@
+---
+title: "The carbon cycle and geochemistry 2"
+author: "Michael Hunt"
+date: "April 24, 2016"
+output: html_document
+---
+## PROBLEM 2: THE FAINT YOUNG SUN AND THE WEATHERING THERMOSTAT
+
+In this problem we will explore in a bit more detail the "Faint Young Sun Paradox," and how the feedback between silicate weathering and temperature can act as a "thermostat" on Earth's climate on long time scales.
+
+Since we will be considering a number of variables to have changed from the present, we will try to use consistent notation; an un-subscripted variable will mean the value of the variable at some past time, and a variable subscripted with $0$ will mean its value at present. For example, Earth's mean temperature at some point in the past will be $T$, and its current temperature will be $T_0$. We will use $S$ to indicate solar irradiance at Earth's orbital distance, and $C$ to indicate carbon dioxide concentrations in the atmosphere.
+
+### 2a
+
+Suppose that an expression for the temperature deviation from the current state is given by:
+
+$T-T_0 = \dfrac{1}{\lambda} \left[ (5.37\textrm{ W/m}^2) \ln{(C/C_0)} + \dfrac{(1-\alpha)S_0}{4}(S/S_0 - 1)\right]$,
+
+where the term in square brackets is a "radiative forcing," or perturbation in energy supply from the present climate (more on this in week 11!), and the parameter $\lambda$ is a "total feedback parameter". $\lambda$ represents the increase in outgoing radiation from the Earth that occurs for a unit change in surface temperature (units: W/m2/K). We will take $\lambda$=1.5 W/m2/K for the rest of this problem.
+
+Now, we want to estimate how much cooler the Earth would have been early in its history, when the sun was much weaker, say $\frac{S}{S_0}=0.85$. A weakening in solar luminosity by 15% corresponds to about 2 billion years ago. Assume a constant planetary albedo of $\alpha$=0.30, and that the current solar constant is $S_0$=1360 W/m2. If carbon dioxide concentrations were unchanged (i.e., $\frac{C}{C_0}=1.0$, how much cooler would the earth have been, in Kelvin? (Note: please answer with a positive number giving the magnitude of how much cooler the Earth would be; do not include units in your answer.)
+
+```{r}
+TmT0=function(lambda,C,C0,S,S0,alpha){
+    (1/lambda)*(5.37*log(C/C0)+((1-alpha)*S0/4) * (S/S0-1))
+}
+
+lambda=1.5
+
+C0=400
+C=C0
+S0=1360
+S=0.85*S0
+alpha=0.3
+
+TmT0(lambda,C,C0,S,S0,alpha)
+```
+
+### 2b
+
+This much cooling from the present, of course, would plunge the Earth's mean temperature well below freezing, with sea ice increasing the albedo of the Earth, and dropping the temperature even more! So how much carbon dioxide do we need to keep the Earth from freezing? Calculate the ratio of past to present carbon dioxide concentrations, $\frac{C}{C_0}$, that would be required to keep Earth's temperature constant with $\frac{S}{S_0}=0.85$.
+
+```{r}
+# Carbon ration C/C_0 required to maintain constant temperature
+Cratio=function(S,S0,alpha){
+    exp((-1/5.370)*((1-alpha)*S0/4) * (S/S0-1))
+}
+S0=1360
+S=0.85*S0
+alpha=0.3
+Cratio(S,S0,alpha)
+```
+To keep the Earth's temperature constant, the simple model above tells us that the negative radiative forcing by reduced solar output must be balanced by a larger greenhouse effect of increased carbon dioxide. Specifically, we need
+$(5.37\textrm{ W/m}^2) \ln{(C/C_0)} = 36\textrm{ W/m}^2$,
+
+Exponentiating gives our answer, $\frac{C}{C_0}=770$, or something like 0.2 - 0.3 bars of carbon dioxide! This is probably an overestimate, for reasons we will not go into, and there is certainly this much carbon dioxide available on Earth, bound in crustal rocks, but paleoclimate proxies suggest that there was probably not quite this much carbon dioxide in Earth's early atmosphere.
+
+### 2c  
+
+The idea of the "weathering thermostat", as described in the lecture clips, is that carbon dioxide has decreased over Earth's history, as the solar output has increased. We can write an equation for the rate of change of mass of total carbon $C_T$ in the near-surface system (including ocean, atmosphere, and terrestrial biosphere), as:
+
+$\frac{d C_T}{dt} = V - W$,  
+
+where $V$ is the rate of volcanic input, and $W$ is the rate of removal by weathering. Given a constant volcanic forcing, which of the following statements must be true in order for the mass of near-surface carbon to be dynamically stable?
+
+ The second derivative of $W$ with respect to $C_T$ must be negative  
+ The second derivative of $W$ with respect to $C_T$ must be zero  
+ The second derivative of $W$ with respect to $C_T$ must be positive  
+ The first derivative of $W$ with respect to $C_T$ must be negative  
+ The first derivative of $W$ with respect to $C_T$ must be positive  - correct
+ 
+ Answer:  
+In order for the mass of near-surface carbon to be dynamically stable, a small perturbation in $C_T$ must be accompanied by a perturbation in $W$ of the same sign. Thus, the first derivative of W with respect to $C_T$ must be positive.  
+
+### 2d  
+
+Walker, Hays, and Kasting (1981) formed a model in which the ratio of past to current weathering rate depends on temperature and carbon dioxide concentration, as:
+
+$W/W_0 = (C/C_0)^a\cdot \exp{[b(T-T_0)]}$. 
+
+The strength of the weathering dependence on carbon dioxide concentration and temperature is given by the parameters $a=0.30$ and $b=0.073$. Using the model from part A for temperature perturbation, this expression for weathering ratio can be expressed in terms of the ratio of past to present carbon dioxide and solar brightness:
+
+$W/W_0 = (C/C_0)^{0.56}\cdot \exp{\left[11.6\left(\dfrac{S}{S_0}-1\right)\right]}$.  
+
+According to the equation given in part C, a quasi-steady state can only be acheived if the weathering rate balances the source of carbon dioxide owing to volcanism. Here, we make the very simple assumption that the rate of volcanism of the early Earth is the same as it is at present. This implies that the weathering rate was also equal to its present value. Under these conditions, what is the ratio of the concentration of carbon dioxide at the time that the sun was 15% dimmer than present compared to the carbon dioxide concentration in the present day? In other words, solve for the value of $\frac{C}{C_0}$ consistent with $\frac{W}{W_0}=1.0$ and $\frac{S}{S_0}=0.85$
+
+```{r}
+S0=1360
+S=0.85*S0
+(1/exp(11.6*(S/S0-1)))^(1/0.56)
+```
+which corresponds  to a (pre-)historical level of somewhere around 5000 - 10000 ppm of carbon dioxide.
+
+
+### 2e
+
+Based on the answer from part D, and the model of temperature change in part A, approximately how much does the weathering feedback described here compensate for solar dimming? In other words, by what fraction is the cooling predicted in part A reduced by including the weathering feedback?
+
+Recall from part a that when $\frac{C}{C_0}$ = 1 we have
+```{r}
+lambda=1.5
+
+C0=400
+C=C0
+S0=1360
+S=0.85*S0
+alpha=0.3
+
+TmT0(lambda,C,C0,S,S0,alpha)
+```
+but if we include weathering feedvack and use the value for $\frac{C}{C_0}$ from part d, we get 
+
+```{r}
+C=(1/exp(11.6*(S/S0-1)))^(1/0.56)*C0 # about 22 times higher
+TmT0(lambda,C,C0,S,S0,alpha)
+
+```
+A C/C0 ratio of 22 gives a radiative forcing of about 17 W/m2.
+This compensates for about half of the -36 W/m2 forcing of a dimmer sun, and thus the temperature reduction is about halved. The early Earth can be kept warmer by tuning parameters in this model, or by invoking the idea that volcanism was likely a stronger carbon dioxide source early in Earth's history; stronger volcanism would require increasing the ratio $\frac{W}{W_0}$ to balance the carbon budget, and this would suggest higher atmospheric carbon dioxide levels and higher temperatures. But it is still unclear if the weathering feedback alone could have kept early Earth from freezing.

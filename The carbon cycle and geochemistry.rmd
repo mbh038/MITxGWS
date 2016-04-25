@@ -1,0 +1,196 @@
+---
+title: "The carbon cycle and geochemistry"
+author: "Michael Hunt"
+date: "April 24, 2016"
+output: html_document
+---
+## PROBLEM 1: ATMOSPHERE-OCEAN PARTITIONING OF CARBON
+
+In this problem we will investigate the partitioning of carbon between the atmosphere and the ocean, and how it depends on pH and temperature. To understand this partitioning, we need to invoke Henry's Law, and know a little bit about the thermodynamics of the dissociation reactions that form the bicarbonate and carbonate ions.
+
+Henry's Law says that, in equilibrium, the concentration of a dissolved gas in an aqueous solution, $[\mbox{X}]$ (units: moles of substance per liter of seawater, or mol/L), is linearly proportional to the partial pressure of the gas, $p_X$ (units: atmospheres, or atm), multiplied by a coefficient, $H_X$ (units: mol/L/atm), which depends on the gas and the temperature, but not on the pressure or amount of water present:
+
+$[\mbox{X}]=H_Xp_X$.  
+
+Recall also that a chemical reaction between chemicals $\mbox{A}$ and $\mbox{B}$ that combine to form compound $\mbox{C}$, can be written as:
+
+$\mbox{A} + \mbox{B} \rightleftharpoons \mbox{C}$.  
+
+The equilibrium state of this reaction -- where the forward and back reaction rates are equal -- can be characterized by an equilibrium constant $K$, defined as:
+
+$K =\dfrac{[\mbox{C}]}{[\mbox{A}][\mbox{B}]}$.  
+
+
+Here, $[\mbox{A}]$, $[\mbox{B}]$, and $[\mbox{C}]$ are concentrations of the reactants and the product (units here: mol/L) in . The equilibrium "constant," of course, is not a universal constant, and generally depends on the temperature and pressure of the system.
+
+Also in this problem, we will lump together gaseous dissolved carbon dioxide and carbonic acid, with concentration denoted as $[\mbox{CO}_2]$.
+
+### 1a
+
+Given $H_{CO_2} = 3.4 \times 10^{-2}$ mol/L/atm at 298 K, and an atmospheric carbon dioxide concentration of 400. parts per million by volume, what is the equilibrium concentration of dissolved carbon dioxide gas in water at sea level (in units of mol/L)?
+
+Enter your answer below as a number of mol/L. Do not include units in your answer.
+
+```{r}
+HC=0.034 # at 298K
+pC=400e-6
+CO2=HC*pC
+CO2
+```
+
+Answer:  
+Dalton's Law says that the partial pressure of any component of a mixture of ideal gases is just equal to the total pressure of the mixture times the volumetric mixing ratio of the component. In this case, the total atmospheric pressure at sea level is 1 atmosphere, so the partial pressure of carbon dioxide is simply
+
+$p_{CO_2}=4.00 \times 10^{-4}\textrm{ atm}$
+
+Multipliying by the Henry's law coefficient for carbon dioxide, $H_{CO_2} = 3.4 \times 10^{-2}$ mol/L/atm, gives a dissolved carbon dioxide concentration of $[\mbox{CO}_2]=1.4\times 10^{???5}$ mol/L.
+
+### 1b  
+
+A gas $\mbox{X}$ that is well-mixed in the atmosphere has a total atmospheric burden $M_{\mbox{X,atm}}$ (units: kg) equal to:
+
+$M_{X,A} = \dfrac{m_X}{\overline{m}}\cdot \dfrac{p_X}{p_{A}}M_{A}$,
+
+where $\frac{p_X}{p_A}$ is the volumetric mixing ratio of the gas (or ratio of its partial pressure to atmospheric pressure), $m_X$ is the molecular weight of the gas (units kg/mol), $\overline{m}$ is the average molecular weight of the gases in the atmosphere (about 0.029 kg/mol), and $M_A$ is the total mass of the atmosphere, about $5.14\times 10^{18}$ kg.
+
+A gas $\mbox{X}$ that is well-mixed in the ocean has a total oceanic burden $M_{X,O}$ (units: kg) equal to:
+
+$M_{X,O} = m_X [\mbox{X}] V_O$,  
+
+where $[\mbox{X}]$ is the concentration of the dissolved gas in water (units mol/L), and $V_O$ is the volume of the ocean, about $1.4\times 10^{21}$ L.
+
+Assume momentarily that dissolved carbon dioxide does not react with water. Calculate the ratio of oceanic to atmospheric masses of carbon dioxide -- in other words, what is the value of $M_{CO_2,O}/M_{CO_2,A}$?
+
+(Note: if masses seem odd for the atmosphere, note that you are calculating masses of carbon dioxide, not of carbon)
+
+```{r}
+HC=0.034
+pC=400e-6
+MA=5.14e18 # kg
+mbar=0.029 # kg/mol
+px=400e-6 # partial pressure of X : 400 ppm is X is CO2
+pa = 1 # 1 atm
+VO=1.4e21 # volume of ocean / m3
+
+MCOMCA=HC*pC*VO*mbar*(pa/px)*(1/MA)
+MCOMCA
+```
+
+which is WAY lower than reality - because CO" is not inert in water, it reacts.
+
+### 1c
+
+Unfortunately for the purposes of the rest of this problem set (though fortunately for the habitability of Earth), carbon dioxide is not inert in water, and thus the atmosphere-ocean partitioning is quite different from what you just estimated. Two reactions in the "carbonate system" and their respective equilibrium constants, are:
+
+$\mbox{CO}_2 + \mbox{H}_2\mbox{O}\rightleftharpoons \mbox{HCO}_3^-+\mbox{H}^+, \qquad  K_1=\dfrac{[\mbox{HCO}_3^-][\mbox{H}^+]}{[\mbox{CO}_2]}$
+ 
+and
+
+$\mbox{HCO}_3^-\rightleftharpoons \mbox{CO}_3^{2-}+\mbox{H}^+, \qquad  K_2=\dfrac{[\mbox{CO}_3^{2-}][\mbox{H}^+]}{[\mbox{HCO}_3^-]}$.
+
+As described in the lectures, carbon dioxide takes part in these two reversible reactions, so the concentration of carbon dioxide stored in the ocean is not just the dissolved gas [CO2], but rather:
+
+$[\mbox{DIC}] = [\mbox{CO}_2]+[\mbox{HCO}_3^-]+[\mbox{CO}_3^{2-}]$,  
+
+where $[\mbox{DIC}]$ signifies "dissolved inorganic carbon" (units: mol/L).
+
+Assume a known concentration of hydrogen ions, $[\mbox{H}^+]$, and use the equilibria of the two reactions above, along with the Henry's law expression, to solve for for the total dissolved inorganic carbon concentration, $[\mbox{DIC}]$.
+
+Answer:  
+
+From part A, recall that:
+
+$[\mbox{CO}_2] = H_C p_C$  
+
+Rearranging the definition of the bicarbonate reaction equilibrium constant gives
+
+$[\mbox{HCO}_3^-] = K_1 \dfrac{[\mbox{CO}_2]}{[\mbox{H}^+]}$,  
+
+and rearranging the definition of the carbonate equilbrium constant gives
+
+$[\mbox{CO}_3^{2-}] = K_2 \dfrac{[\mbox{HCO}_3^-]}{[\mbox{H}^+]} = K_1 K_2 \dfrac{[\mbox{CO}_2]}{[\mbox{H}^+]^2}$. 
+
+Combining these three expressions gives:
+
+$[\mbox{DIC}] = p_C H_C \left(1+\dfrac{K_1}{[\mbox{H}^+]}+\dfrac{K_1K_2}{[\mbox{H}^+]^2}\right)$  
+
+Since the equilibrium constants are positive, and hydrogen ion concentrations are positive, note that from a mathematical standpoint, we can see that this is strictly greater than the concentration of dissolved carbon dioxide gas alone.
+
+### 1d  
+
+Now, let's return to the question from part B. What is the ratio of total dissolved inorganic carbon to atmospheric carbon? Note that the result from part C can be incorporated by just replacing the value of the Henry's law coefficient in the answer to B with a different value that now depends on pH (hydrogen ion concentration) and the equilibrium constants $K_1$ and $K_2$. Feel free to check the answers to 1B and 1C before doing this question.
+
+To answer this question, assume that $[\mbox{H}^+] = 10^{-8.2} = 6.3 \times 10^{-9}$ mol/L (a pH of 8.2), that $K_1=4.3\times 10^{-7}$ mol/L, and $K_2=4.7\times 10^{-11}$ mol/L. Calculate the ratio of total dissolved inorganic carbon in the ocean to atmospheric carbon.
+
+```{r}
+K1=4.3e-7
+K2=4.7e-11
+pH=8.2
+HC_PRIME=function(pH,K1,K2,HC){
+    H=10^{-pH}
+    HC*(1+K1/H+K1*K2/H^2)
+}
+HC_PRIME(pH,K1,K2,HC)
+DIC=HC_PRIME(pH,K1,K2,HC)*pC
+MCOMCA_PRIME8.2=HC_PRIME(pH,K1,K2,HC)*pC*VO*mbar*(pa/px)*(1/MA)
+MCOMCA_PRIME8.2
+```
+Answer: 
+
+This is modified from part B only in the definition of the Henry's law coefficient:
+
+$\dfrac{M_{DIC,O}}{M_{CO_2,A}} = \dfrac{p_A \overline{m} H_{CO_2}^\prime V_O}{M_A}$
+
+
+where the 'primed' value of the Henry's law coefficient is given by:
+
+$H_{CO_2}^\prime = H_{CO_2} \left(1+\dfrac{K_1}{[\mbox{H}^+]}+\dfrac{K_1K_2}{[\mbox{H}^+]^2}\right)$  
+
+With the values given for $[\mbox{H}^+]$, $K_1$, and $K_2$, we find that $H_{CO_2}^\prime$=2.4 mol/L/atm, which is about 70 times as large as $H_{CO_2}$! Plugging in values for sea level pressure as 1 atm, and the volume of the ocean and mass of the atmosphere as above, we estimate that there is approximately 19 times as much mass of dissolved inorganic carbon in the ocean as there is carbon dioxide in the atmosphere.
+
+Note: The values for hydrogen ion concentration and equilibrium coefficients correspond to an assumption that the pH of seawater is 8.2, and that the temperature of seawater is a balmy 298 K. We will vary these assumptions soon...
+
+
+### 1e  
+
+So we see that for the assumptions just made, the mass of dissolved inorganic carbon in the ocean is much larger than the mass of gaseous carbon dioxide in the atmosphere. But how strongly does this depend on pH? Recall that pH is defined as $\mbox{pH} = -log_{10}([\mbox{H}^+])$.
+
+What would the ratio of oceanic dissolved inorganic carbon to atmospheric carbon be for a neutral ocean, with a pH of 7.0?
+
+Answer: 
+
+```{r}
+HC_PRIME8.2=HC_PRIME(8.2,K1,K2,HC)
+HC_PRIME8.2
+HC_PRIME7=HC_PRIME(7,K1,K2,HC)
+HC_PRIME7
+MCOMCA_PRIME7=HC_PRIME(7,K1,K2,HC)*pC*VO*mbar*(pa/px)*(1/MA)
+MCOMCA_PRIME7
+```
+
+A pH of 7.0 means $[\mbox{H}^+]=10^{-7.0}$ mol/L. Following 1D, but with a different hydrogen ion concentration, we obtain $H_{CO_2}^\prime=0.18$ mol/L/atm, much smaller than we found for a slightly basic ocean that had a pH of 8.2. Again plugging in values for sea level pressure as 1 atm, and the volume of the ocean and mass of the atmosphere as above, we estimate that a neutral ocean would have only 1.4 times as much dissolved inorganic carbon in the ocean as carbon dioxide in the atmosphere.
+
+The amount of carbon in the ocean is thus a very strong function of its pH. In both of the last two problems, we have considered the pH of the ocean to be a known constant. But in the real world, the pH of the ocean is determined by the concentration of various ions, including dissolved carbon dioxide. A full treatment of this problem involves considering the ocean's charge balance, but we will not go into that here! In any case, the last two calculations -- parts D and E -- should give you a quantitative perspective on why ocean acidification (pH lowering), caused by carbon dioxide, limits further uptake of carbon dioxide by the ocean.
+
+
+### 1f
+
+Temperature-dependence is more complicated; all three of the "constants" $H_{CO_2}$, $K_1$, and $K_2$, depend on temperature, as does the pH of pure water. Furthermore, the temperature-dependencies don't all go in the same direction; carbon dioxide is less soluble in warmer water, but dissociates more readily into bicarbonate and carbonate ions. For the sake of this problem, we're only going to consider the dependence of carbon dioxide solubility (i.e., the Henry's law coefficient) on temperature.
+
+A physically well-founded approximation for the dependence of the solubility of carbon dioxide on temperature is given by:
+
+$H_{CO_2}(T) = H_{CO_2}(T_{ref}) \cdot \exp \left[-8.053\left(1-\frac{T_{ref}}{T}\right)\right]$,
+
+which related the Henry's law coefficient at temperature $T$ to the Henry's law coefficient at a reference temperature $T_{ref}$, which is for our purposes 298 K. What is the ratio of the amount of dissolved carbon dioxide gas that can be held by water at 275 K, as compared to water at 298 K?
+
+```{r}
+Tref=298
+HCref=0.034
+HC<-function(T,Tref,HCref){
+    HCref*exp(-8.053*(1-Tref/T))
+}
+HC(275,Tref,HCref)
+HC(275,Tref,HCref)/HCref
+```
+
+About twice as much!. Thus, although dissociation of dissolved carbon dioxide is actually favored at higher temperatures, the reduced solubility of carbon dioxide gas wins out, causing a drop in total dissolved inorganic carbon as temperatures rise. The lecture clip on this noted an order 10% rise in dissolved inorganic carbon concentration in seawater as temperatures drop over the range given here (from ~25 C to ~2 C); a thorough derivation of this number requires more chemistry than we have time or space for in this class.
