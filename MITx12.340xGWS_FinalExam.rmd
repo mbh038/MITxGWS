@@ -1,0 +1,359 @@
+---
+title: 'MITx 12.340x Global Warming Science: Final Exam'
+author: "Michael Hunt"
+date: "May 8, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Q1
+
+Write down an expression for "F", the total radiative energy flux per unit area from an ideal blackbody radiator, as a function of its absolute temperature "T" and the Stefan-Boltzmann constant "sigma". Explicitly indicate any mathematical operations with the appropriate symbol (e.g. '+', '-', '*', '/', '^').
+
+Answer: 
+
+$$F=\sigma T^4$$
+
+### Q2
+
+Which one of these scientists is generally credited as being the first to postulate that our atmosphere provides a greenhouse effect?
+
+ Isaac Newton  
+ Jean Baptiste Fourier  -- correct
+ John Tyndall  
+ Albert Einstein
+ 
+ Answer:
+ 
+In the 1820s, Fourier estimated the temperature the Earth should have in the absence of atmospheric effects and found it was much too cold. He speculated that heat trapping by the atmosphere might be responsible for the relative warmth of the surface.
+
+### Q2
+
+What is the main reason that summer is generally warmer than winter?
+
+ The Earth is closer to the sun in summer.  
+ Without snow on the ground, the albedo is lower in summer.  
+ Sunlight incident on the summer hemisphere is more nearly perpendicular to the Earth's surface, so that more sunlight is absorbed per unit area.  
+ The atmosphere has a greater concentration of water vapor in summer.
+ 
+Answer:  
+
+Summer is warmer than winter principally because the obliquity of the earth's rotation axis with respect to the orbital plane means that sunlight strikes the summer hemisphere at a smaller angle to the vertical than it does the winter hemisphere.
+
+### Q3  
+
+What is the main reason that summer is generally warmer than winter?
+
+ The Earth is closer to the sun in summer.  
+ Without snow on the ground, the albedo is lower in summer.  
+ Sunlight incident on the summer hemisphere is more nearly perpendicular to the Earth's surface, so that more sunlight is absorbed per unit area. - correct  
+ The atmosphere has a greater concentration of water vapor in summer.
+ 
+Answer:  
+Summer is warmer than winter principally because the obliquity of the earth's rotation axis with respect to the orbital plane means that sunlight strikes the summer hemisphere at a smaller angle to the vertical than it does the winter hemisphere.
+
+### Q4
+
+Which one of these scientists is generally credited as being the first to discover which atmospheric gases are responsible for the greenhouse effect?
+
+ John Tyndall  -- correct
+ Svante Arrhenius  
+ Max Planck  
+ James Maxwell
+
+
+Answer:  
+
+John Tyndall devised an apparatus for measuring infrared absorption by various gases, and with it he discovered that most infrared absorption in our atmosphere is owing to water vapor, carbon dioxide and a few other trace gases.
+
+### Q5
+
+Write down an expression for the average amount of sunlight absorbed by the Earth per unit surface area, Fs, as a function of the solar constant "S" and the planetary albedo "alpha". Explicitly indicate any mathematical operations with the appropriate symbol (e.g. '+', '-', '*', '/', '^').
+
+$$F_s=\dfrac{S}{4}*(1-\alpha)$$
+
+
+### Q6
+
+To the nearest whole number, what is the ratio of the average amount of infrared back-radiation from the atmosphere and clouds absorbed by the Earth's surface, to the average amount of sunlight absorbed by the Earth's surface?
+
+2
+
+On average, the Earth's surface absorbs $168 \textrm{ W m}^{-2}$ of solar radiation and $324 \textrm{ W m}^{-2}$ of infrared back-radiation from the atmosphere and clouds.
+
+### Q7
+
+Most of what we usually call "weather" occurs in which of these layers of the atmosphere?
+
+ The thermosphere.  
+ he mesosphere.  
+ The stratosphere.  
+ The troposphere.  - correct
+ 
+Answer:  
+
+Almost all weather occurs in the troposphere, a region of the atmosphere that extends from the Earth's surface to the tropopause, which is usually between 8 and 14 km altitude. The great static stability of the stratosphere, which lies above the tropopause, strongly inhibits upward transport of water vapor and other transient gases and aerosols from the troposphere.
+
+### Q8
+
+On average, which one of these processes is primarily responsible for cooling the Earth's surface, to balance incoming absorbed sunlight?
+
+ _Net_ infrared radiation  
+ Turbulent flux of sensible heat away from the surface  
+ Evaporation from the surface< - correct  
+ Ocean currents
+ 
+On average, evaporation of water from the surface carries away $78 textrm{ W m}^{-2}$, net infrared radiation carries away $66 \textrm{ W m}^{-2}$, and the sensible heat flux is about $24 \textrm{ W m}^{-2}$ .
+
+### Q9  
+
+Which one of these scientists is generally credited for being the first to estimate the average surface warming that would occur if the carbon dioxide content of the atmosphere were doubled?
+
+ Jean Baptiste Fourier  
+ John Tyndall  
+ Svante Arrhenius - correct  
+ Jule Charney
+ 
+### Q10
+
+Physically, why are the greenhouse gases, like water vapor and carbon dioxide, so much more effective in absorbing solar and/or infrared radiation than are oxygen and nitrogen?
+
+ The concentrations of greenhouses gases in the atmosphere are greater than the concentrations of oxygen and nitrogen.  
+
+ Greenhouse gases have many more degrees of freedom, such as rotational and vibrational transitions, in interacting with radiation than do nitrogen and oxygen, owing to the greater complexity of their molecular structure. - correct  
+ The molecular weights of greenhouse gases are greater than those of oxygen and nitrogen.  The larger physical size of more complex molecules means that they can interact more readily with infrared radiation.
+ 
+Answer:  
+Molecular oxygen and nitrogen are simple homonuclear diatomic molecules with no electric dipole moment, while the greenhouse gases have rich absorption spectra owing to numerous vibrational, rotational, and rotational-vibrational modes.
+
+### Q11
+
+Which of these is responsible for most of the Earth's albedo?
+
+ Clouds -- correct
+ Sea ice  
+ Land ice  
+ Deserts
+ 
+Clouds are responsible for more than 70% of the Earth's total albedo.
+
+### Q12
+
+In a dry atmosphere, which one of these expresses a condition for instability to convection?
+
+ Temperature decreases with altitude.  
+ Temperature increases with altitude.  
+ Pressure decreases with altitude.  
+ Entropy decreases with altitude.
+ 
+### Q19
+
+In terms of its effect on annual mean surface air temperature, which of these greenhouse gases has the greatest aggregate effect?
+
+ Nitrous oxide  
+ Carbon dioxide  
+ Ozone  
+ Water 
+ vapor - correct
+ 
+Answer:
+
+Mostly because of its much greater abundance, water vapor dominates other greenhouse gases in its effect on surface temperature.
+
+### Q20
+
+It has been suggested that Mars once had liquid water on its surface. If so, this was probably mainly because the Martian atmosphere likely had...
+
+ more clouds than it does presently.  
+ less oxygen than it does presently.  
+ more carbon dioxide than it does presently. - correct  
+ fewer particles than it does presently.
+ 
+Answer:  
+
+It is possible that the Martian atmosphere had more carbon dioxide early in its history, warming the surface and thereby allowing for the presence of liquid water. (a thicker atmosphere)
+ 
+### Q21
+
+What is the average residence time of a molecule of water in the atmosphere?
+
+ 3 days  
+ 2 weeks - correct  
+ 1 year  
+ 20 years 
+ 
+Answer: 
+
+Water is constantly evaporating from the surface and falling back to the surface as rain or snow. The average residence time of a water molecule in the atmosphere is about 2 weeks.
+
+### Q22
+
+Which one of these processes is generally thought to be primarily responsible for the timing of the glacial-interglacial cycles over the past few million years?  
+
+Variations in earth's orbit around the sun and in the tilt of its rotation axis - correct  
+Variations in solar radiative output  
+Changes in the greenhouse gas content of the atmosphere  
+Changes in ocean circulation  
+
+Answer:  
+
+The Milankovitch cycles of the obliquity of the Earth's rotation axis, its precession, and the ellipticity of the Earth's orbit around the sun are generally recognized as the root cause of the glacial-interglacial cycles of the past few million years, but changes in greenhouse content and ocean circulation are thought to be important feedbacks in this mode of climate change.
+ 
+### Q23  
+
+Which one of these statements best describes the effect of clouds on the mean surface air temperature of Earth?
+
+ By reflecting sunlight, clouds always cool the surface.  
+ By absorbing and re-radiating infrared radiation, clouds always warm the surface.  
+ Depending on their altitude and optical properties, clouds can cool or warm the surface. - correct  
+ Clouds have only a very small effect on surface temperature.  
+ 
+Answer:  
+
+Low-level clouds emit infrared radiation at temperatures not very different from those of the surface, so they have little greenhouse effect, but their high albedo yields a strong cooling. High clouds emit at temperatures much lower than those of the Earth's surface, and so are effective greenhouse agents, though they also reflect some sunlight. Thus, depending in their altitude and optical properties, clouds can cool or warm the surface.
+
+### Q24
+
+Comprehensive calculations of radiative equilibrium yield surface temperatures that are somewhat warmer than observed, and tropopause temperatures that are somewhat colder than observed. What is the main reason for this?
+
+ Radiative equilibrium neglects the effects of large-scale circulation of the atmosphere and ocean.  
+ Radiative equilibrium calculations specify cloudiness rather than including it as part of the solution.  
+ Radiative equilibrium calculations often neglect aerosols.  
+Dry and moist convection are neglected.</text> - correct  
+
+Answer:  
+
+Convection transports enthalpy upward and thereby cools the lower atmosphere and surface while warming the middle and upper troposphere.
+
+### Q25
+
+What is the principal cause of the large-scale circulation of the ocean?
+
+ Lunar and solar tides  
+ Surface winds   -- correct
+ Horizontal gradients of ocean temperature</text>
+ Horizontal gradients of salinity
+ 
+Answer:  
+ 
+Surface winds are the primary drivers of ocean circulation. On large scales, the curl of the surface wind stress drives Ekman pumping, which in turn drives large-scale ocean circulations, and small scale wind storms may contribute to vertical mixing, which also drives large-scale overturning circulations in the oceans.
+
+### Q26
+
+Which of these statements best describes Sverdrup balance in the oceans?
+
+ A balance between pressure gradients and Coriolis accelerations.  
+ A balance between the vertical pressure gradient and gravity.  
+ A balance between the torque produced by the curl of the surface wind stress and advection of planetary vorticity by meridional flow of water. - correct  
+ A balance between Coriolis acceleration and meridional advection of zonal momentum.  
+
+Answer:  
+
+The Sverdrup relation entails a balance between the curl of the surface wind stress and the meridional advection of planetary vorticity. It yields a good first-order description of the large-scale horizontal flow of the oceans.
+
+### Q28
+
+Over the next 100 years, which of the reservoirs listed below is predicted to play the largest role in removing anthropogenic CO2 from the atmosphere?
+
+ Rocks/subsurface (including fossil fuels)  
+ Plants  
+ Ocean - correct  
+ Soils
+
+Answer:  
+
+Roughly half of the anthropogenic carbon emitted to the atmosphere over the next century will wind up in the oceans.
+
+### Q29
+
+Where will the greatest amount of anthropogenic CO2 end up over the next 1 million years?
+
+ In soils  
+ As fossil fuels  
+ Dissolved in the ocean  
+ As calcium carbonate in seafloor sediments - correct
+ 
+Answer:  
+
+On the time scale of a million years, most of the carbon we emit to the atmosphere, after dissolving in the ocean, will wind up as calcium carbonate deposits on the seafloor.
+
+### Q30
+
+Which of the following best describes why Hadley circulations are limited to the Earth's tropics?
+
+ Outside the tropics, Coriolis accelerations are strong enough to balance temperature gradients (through the thermal wind relation). - correct  
+ It is too cold outside the tropics.  
+ There is not enough water vapor outside the tropics.  
+ The lack of eddy activity outside Earth's tropics prevents overturning circulations from developing.  
+ 
+Answer:  
+
+Hadley circulations occur where there is not enough angular momentum available to create wind speeds necessary so that Coriolis accelerations may balance horizontal pressure gradient accelerations associated with horizontal temperature gradients. Outside the tropics, there is more than enough angular momentum available to satisfy this balance.
+
+### Q31  
+
+Which of these atmospheric phenomena is primarily responsible for meridional atmospheric transport of heat in middle and high latitudes?
+
+ The Hadley Circulation  
+ Moist convection  
+ The Ferrel Cell  
+ Stationary planetary waves excited by air flow over mountains 
+ Travelling baroclinic waves with typical horizontal dimensions of a few thousand kilometers - correct  
+ 
+Answer:  
+
+Outside the tropics, baroclinic eddies, associated with "highs" and "lows" on weather maps, are responsible for most of the poleward enthalpy transport in the atmosphere.
+ 
+### Q32
+
+Satellite and weather balloon observations of the upper stratosphere show that it has been cooling over the past few decades, even though the troposphere has been warming. Which of these trends best explains this observation?
+
+ Decreasing ozone content of the stratosphere  
+ Increasing carbon dioxide concentration of the atmosphere (including the stratosphere) - correct   
+ Decreasing amplitude of the 11-year solar cycle    
+ Changing aerosol content of the stratosphere  
+
+Answer: 
+
+Both increasing carbon dioxide concentrations and decreasing ozone concentrations result in a cooling of the stratosphere. However, the cooling of the upper stratosphere is primarily driven by increasing radiative cooling due to carbon dioxide, while in the lower stratosphere the effect of ozone is important.
+
+
+ 
+### Q33
+
+Theoretically, which best describes the dependence of equilibrium surface temperature on atmospheric carbon dioxide concentration?
+
+ Equilibrium temperature increases linearly with CO2 content.  
+ Equilibrium temperature increases quadratically with CO2 content.  
+ Equilibrium temperature increases logarithmically with CO2 content. -- correct  Equilibrium temperature increases exponentially with CO2 content.
+ 
+See this [article in Skeptical Science](http://www.skepticalscience.com/C02-emissions-vs-Temperature-growth.html)
+
+Using data from that article:
+
+```{r}
+CumEmissions=c(0,500,1000,1500,2000,2500) # GtC
+inAtmosFraction=0.45 # fraction remainiong in atmosphere
+leftInAtmos=inAtmosFraction*CumEmissions # GtC
+GtCper_ppmRise=2.12 # additional GtC in atmosphere required for 1 ppm rise in CO2 concentration
+C0 =280 # pre-industrial CO2 concentration in atmosphere in ppm
+CO2conc=C0 + leftInAtmos/GtCper_ppmRise
+
+RF=function(x){
+    5.35*log(x)
+}
+
+RFCO2 = 5.35*RF(CO2conc/C0) # radiative forcing depends logarithmically on CO2 concentration
+
+
+RFdoubling=RF(2)
+sensitivity=3 # temperature rise in K for a doubling of CO2
+Tanomaly=sensitivity*RFCO2/RFdoubling
+plot(log(CO2conc),Tanomaly)
+fit=lm(Tanomaly~log(CO2conc))
+abline(fit$coefficients[1],fit$coefficients[2])
+```
+Primarily because of the exponential tails of the pressure-broadened line spectra of carbon dioxide, increasing carbon dioxide concentration in the atmosphere results in an increase in radiative forcing that varies nearly logarithmically with concentration.

@@ -1,0 +1,16 @@
+---
+title: "Forcings and Feedbacks"
+author: "Michael Hunt"
+date: "May 9, 2016"
+output: pdf_document
+---
+
+Energy balance at the top of the atmosphere
+
+$$F_{TOA} =F_{Solar}-F{IR}$$
+
+If the planet is in equilibrium, these two balance at the top of the atmosphere and the net top-of-the-atmosphere flux $F_{TOA}=0$
+
+Now, $F_{TOA}$ is a function of the surface temperature and many other variables.
+
+$$F_{TOA}=F_{TOA}\left(T_S,x_1,x_2 \dots x_N\right)$$
