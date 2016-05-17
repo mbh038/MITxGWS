@@ -122,11 +122,68 @@ $(document).ready(function () {
 </div>
 
 
+<div id="forcings-and-feedbacks-in-the-climate-system" class="section level2">
+<h2>Forcings and feedbacks in the climate system</h2>
+<div id="overview" class="section level3">
+<h3>Overview</h3>
 <p>Energy balance at the top of the atmosphere</p>
-<p><span class="math display">\[F_{TOA} =F_{Solar}-F{IR}\]</span></p>
+<p><span class="math display">\[F_{TOA} =F_{Solar}-F_{TIR}\]</span></p>
 <p>If the planet is in equilibrium, these two balance at the top of the atmosphere and the net top-of-the-atmosphere flux <span class="math inline">\(F_{TOA}=0\)</span></p>
 <p>Now, <span class="math inline">\(F_{TOA}\)</span> is a function of the surface temperature and many other variables.</p>
 <p><span class="math display">\[F_{TOA}=F_{TOA}\left(T_S,x_1,x_2 \dots x_N\right)\]</span></p>
+<p>By the chain rule,</p>
+<p><span class="math display">\[\delta F_{TOA}=0=\dfrac{\partial F_{TOA}}{\partial T_s}\delta T_s+\sum_{i=1}^N\dfrac{\partial F_{TOA}}{\partial x_i}\delta x_i\]</span></p>
+<p>Now let’s call the <span class="math inline">\(N^{th}\)</span> process a “forcing”, <span class="math inline">\(\delta Q\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+\delta F_{TOA}&amp;=0\\
+&amp;=\dfrac{\partial F_{TOA}}{\partial T_s}\delta T_s+\sum_{i=1}^{N-1}\dfrac{\partial F_{TOA}}{\partial x_i}\delta x_i+\delta Q\\
+&amp;=\dfrac{\partial F_{TOA}}{\partial T_s}\delta T_s 
++\sum_{i=1}^{N-1}\dfrac{\partial F_{TOA}}{\partial x_i}\dfrac{\partial x_i}{\partial T_s}\delta T_s+\delta Q
+\end{align*}\]</span></p>
+<p>Then the climate sensitivity <span class="math inline">\(\frac{\partial T_s}{\partial Q}\)</span> which we will denote <span class="math inline">\(\lambda_R\)</span> is given by</p>
+<p><span class="math display">\[
+\dfrac{\partial T_s}{\partial Q}\equiv\lambda_R=
+\dfrac{-1}{\dfrac{\partial F_{TOA}}{\partial T_s} 
++\sum_{i=1}^{N-1}\dfrac{\partial F_{TOA}}{\partial x_i}\dfrac{\partial x_i}{\partial T_s}}
+\]</span></p>
+<p>Let</p>
+<p><span class="math display">\[
+S\equiv{\left(-\dfrac{\partial F_{TOA}}{\partial T_s}\right)}^{-1}
+\]</span></p>
+<p>be the climate sensitivity without feedbacks, then the climate sensitivity with feedbacks is given by</p>
+<p><span class="math display">\[
+\dfrac{\partial T_s}{\partial Q}\equiv\lambda_R=
+\dfrac{S}{1- 
+S\sum_{i=1}^{N-1}\dfrac{\partial F_{TOA}}{\partial x_i}\dfrac{\partial x_i}{\partial T_s}}
+\]</span></p>
+<p>In the denominator, each of the feedback factors <span class="math inline">\(\frac{\partial F_{TOA}}{\partial x_i}\)</span> may be of either sign.</p>
+<p>We see that the feedback factors do <strong>NOT</strong> add linearly in their collective impact on climate sensitivity.</p>
+</div>
+<div id="the-planck-feedback" class="section level3">
+<h3>The Planck Feedback</h3>
+<p>The increase in emitted longwave radiation by Earth with temperature, due to the dependence of blackbody emission on temperature, is a key stabilizing mechanism for the climate. We refer to the derivative of ??Te4 with respect to Te as the “Planck Feedback.” For Earth, what is the magnitude of the Planck feedback, in W/(m2.K)?</p>
+<pre class="r"><code>sigma=5.67e-8
+Te=255
+planck_fb=4*sigma*Te^3
+planck_fb</code></pre>
+<pre><code>## [1] 3.760656</code></pre>
+<p>The Planck Feedback is given by <span class="math display">\[\frac{d}{d T_e} \left( \sigma T_e^4 \right) = 4 \sigma T_e^3\]</span>, which is approximately 3.76 W/(m2.K) for a reference-state <span class="math inline">\(T_e=255\)</span> K. Note that since the radiative forcing due to a doubling of carbon dioxide is approximately this large, a doubling of carbon dioxide in the absence of any other feedbacks besides the Planck response would lead to about a 1oC warming.</p>
+</div>
+<div id="examples-of-forcing" class="section level3">
+<h3>Examples of Forcing</h3>
+<ul>
+<li>Changing solar constant</li>
+<li>Orbital forcing</li>
+<li>Changing concentrations of non-interactive greenhouse gases</li>
+<li>Volcanic aerosols</li>
+<li>Manmade aerosols</li>
+<li>Land use changes</li>
+</ul>
+</div>
+<div id="earth-rotation-and-orbital-variations" class="section level3">
+<h3>Earth Rotation and Orbital variations</h3>
+</div>
+</div>
 
 
 

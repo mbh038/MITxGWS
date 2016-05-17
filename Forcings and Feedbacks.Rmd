@@ -2,15 +2,89 @@
 title: "Forcings and Feedbacks"
 author: "Michael Hunt"
 date: "May 9, 2016"
-output: pdf_document
+output: html_document
 ---
+
+##  Forcings and feedbacks in the climate system
+
+### Overview
 
 Energy balance at the top of the atmosphere
 
-$$F_{TOA} =F_{Solar}-F{IR}$$
+$$F_{TOA} =F_{Solar}-F_{TIR}$$
 
 If the planet is in equilibrium, these two balance at the top of the atmosphere and the net top-of-the-atmosphere flux $F_{TOA}=0$
 
 Now, $F_{TOA}$ is a function of the surface temperature and many other variables.
 
 $$F_{TOA}=F_{TOA}\left(T_S,x_1,x_2 \dots x_N\right)$$
+
+By the chain rule,
+
+$$\delta F_{TOA}=0=\dfrac{\partial F_{TOA}}{\partial T_s}\delta T_s+\sum_{i=1}^N\dfrac{\partial F_{TOA}}{\partial x_i}\delta x_i$$
+
+Now let's call the  $N^{th}$ process a "forcing", $\delta Q$:
+
+$$\begin{align*}
+\delta F_{TOA}&=0\\
+&=\dfrac{\partial F_{TOA}}{\partial T_s}\delta T_s+\sum_{i=1}^{N-1}\dfrac{\partial F_{TOA}}{\partial x_i}\delta x_i+\delta Q\\
+&=\dfrac{\partial F_{TOA}}{\partial T_s}\delta T_s 
++\sum_{i=1}^{N-1}\dfrac{\partial F_{TOA}}{\partial x_i}\dfrac{\partial x_i}{\partial T_s}\delta T_s+\delta Q
+\end{align*}$$
+
+Then the climate sensitivity $\frac{\partial T_s}{\partial Q}$ which we will denote $\lambda_R$ is given by
+
+$$
+\dfrac{\partial T_s}{\partial Q}\equiv\lambda_R=
+\dfrac{-1}{\dfrac{\partial F_{TOA}}{\partial T_s} 
++\sum_{i=1}^{N-1}\dfrac{\partial F_{TOA}}{\partial x_i}\dfrac{\partial x_i}{\partial T_s}}
+$$
+
+Let
+
+$$
+S\equiv{\left(-\dfrac{\partial F_{TOA}}{\partial T_s}\right)}^{-1}
+$$
+
+be the climate sensitivity without feedbacks, then the climate sensitivity with feedbacks is given by
+
+$$
+\dfrac{\partial T_s}{\partial Q}\equiv\lambda_R=
+\dfrac{S}{1- 
+S\sum_{i=1}^{N-1}\dfrac{\partial F_{TOA}}{\partial x_i}\dfrac{\partial x_i}{\partial T_s}}
+$$
+
+In the denominator, each of the feedback factors $\frac{\partial F_{TOA}}{\partial x_i}$ may be of either sign.
+
+We see that the feedback factors do __NOT__ add linearly in their collective impact on climate sensitivity.
+
+
+### The Planck Feedback
+
+The increase in emitted longwave radiation by Earth with temperature, due to the dependence of blackbody emission on temperature, is a key stabilizing mechanism for the climate. We refer to the derivative of $\sigma T_e^4$ with respect to $T_e$ as the "Planck Feedback." For Earth, what is the magnitude of the Planck feedback, in W/(m2.K)?
+
+```{r}
+sigma=5.67e-8
+Te=255
+planck_fb=4*sigma*Te^3
+planck_fb
+```
+
+The Planck Feedback is given by
+$$\frac{d}{d T_e} \left( \sigma T_e^4 \right) = 4 \sigma T_e^3$$,
+which is approximately 3.76 W/(m2.K) for a reference-state $T_e=255$ K. Note that since the radiative forcing due to a doubling of carbon dioxide is approximately this large, a doubling of carbon dioxide in the absence of any other feedbacks besides the Planck response would lead to about a 1oC warming.
+
+### Examples of Forcing
+
+* Changing solar constant
+* Orbital forcing
+* Changing concentrations of non-interactive greenhouse gases
+* Volcanic aerosols
+* Manmade aerosols
+* Land use changes
+
+### Earth Rotation and Orbital variations
+
+
+
+
