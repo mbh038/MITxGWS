@@ -1,0 +1,241 @@
+tart of transcript. Skip to the end.
+In the last video, we saw that the radiative equilibrium
+of a troposphere is unstable to convection.
+We showed that by demonstrating that when the entropy decreases
+with altitude, as it does in the radiative equilibrium solution,
+the atmosphere is unstable to convection.
+And that convection will quickly render the atmosphere
+nearly neutral to convection, which
+means that the entropy profile would be constant with height.
+Now, this brings us to the subject of radiative convective
+equilibrium.
+This is what happens when both radiation and convection are
+active and establish a new equilibrium.
+This equilibrium is different qualitatively
+from radiative equilibrium in that it
+is a statistical equilibrium state.
+Convection itself is chaotic.
+That is convection is very time-dependent.
+It varies a lot in a space, like boiling water.
+But if we take an average over many convective plumes
+or over much time, we can derive a state
+which is statistically stable which
+we call radiative convective equilibrium.
+Now, the easiest way to calculate that is simply
+to assume that what the convection does
+is render the atmosphere neutral to itself, that is render
+the atmosphere as having a constant entropy profile.
+And so whenever we find in a radiative equilibrium state
+that the entropy actually decreases with height,
+we adjust the entropy profile back
+to constant while conserving energy.
+This is the simplest way of estimating
+the radiative convective equilibrium state.
+Now, here is a diagram that shows
+what that adjustment actually does.
+So what you see here is the original radiative equilibrium
+profile, this profile here.
+And the profile, once it's been adjusted-- that's this profile
+here-- this represents constant entropy,
+which means that the temperature lapse
+rate is g over cp, about 1 degree per 100 meters.
+Let's compare these two profiles.
+Remember that the pure radiative equilibrium
+had a very high surface temperature of 333 degrees
+Kelvin, of course, much higher than observed anywhere
+on the planet.
+But the adjusted state is much cooler at the surface,
+although still much warmer than observed with a surface
+temperature of about 318 Kelvin.
+Note that the profile of temperature
+in the adjusted state, here, obeys
+the constant entropy lapse rate of about a degree per 100
+meters.
+So you'll notice that this adjusted state
+is much warmer through much of the troposphere
+except very close to the surface where it's cooler.
+You might also notice the profiles are slightly
+different even in the stratosphere.
+Now, why should that be so?
+After all, the stratosphere, unlike the troposphere,
+the radiative equilibrium state is actually
+stable to convection.
+So why do we see any difference?
+This is a reminder that radiative transfer
+is non-local, that is if one changes the temperature
+or emissivity of any part of the atmosphere, that changes
+the radiation emitted from that layer.
+And that, in turn, will change the radiation
+absorbed by other layers.
+So whenever one makes an adjustment
+to one part of the atmosphere, potentially,
+any other part of the atmosphere can adjust.
+And we see that in this adjusted profile.
+Now, although the radiative convective equilibrium solution
+is much closer to what we observe
+in the atmosphere than the pure radiative equilibrium,
+it still has some problems.
+It's still too hot at the surface and too cold
+at the tropopause.
+Why is that?
+Well, it turns out that the reason for this,
+for the most part, is that in the real atmosphere,
+convection involves a phase change of water.
+And whenever water changes phase in convection
+in the atmosphere, we call that kind
+of convection moist convection.
+Now, here is a photograph I once took from an airplane showing
+a typical cloudscape in the tropical atmosphere.
+It's really quite beautiful.
+What one sees is this collection of cumulus clouds-- here's one,
+for example-- ranging in size some very small fractus
+clouds, like this guy, to trade cumulus clouds, like this one.
+And in the distance, one sees a very large cumulonimbus cloud
+going all the way up to the tropopause.
+Several things to note about this.
+First of all, what is a cloud?
+A cloud is simply a very dense collection
+of very tiny condensed water droplets
+or ice crystals depending on the temperature.
+They're so small that their terminal velocities are tiny
+compared to air motions.
+And we can consider the water to be in suspension.
+Now, condensed water forms in the atmosphere,
+generally speaking, when samples of air expand and cool,
+their saturation vapor pressure drops down
+to below the actual vapor pressure
+of the sample, water vapor condenses and forms a cloud.
+This happens most commonly when air
+rises from high pressure near the surface towards lower
+pressure higher in the atmosphere.
+It expands and cools.
+And we'll talk a little bit about how
+that happens in a moment.
+But for now, just think of these cumulus clouds
+as representing places where air is on the whole ascending.
+When water vapor condenses in the atmosphere,
+it releases the latent heat of vaporization.
+When it freezes, it also releases the latent heat
+of fusion.
+So air ascending in these clouds is not
+cooling at the adiabatic lapse rate we defined before.
+Therefore, our whole idea of convective adjustment
+has to be altered to account for this heat released
+when water vapor condenses.
+Another thing to notice about this state
+is that, very typically, the updrafts,
+as denoted by the clouds, cover a relatively small
+fractional area of the sky, that is there is somewhat more clear
+air than there are clouds in a scene like this.
+This scenario that you see in this photograph
+is very much what we would expect
+to see in an atmosphere that was in radiative moist convective
+equilibrium where the two main heat transfer processes are
+radiation and moist convection.
+Moist convection extends from a few hundred meters
+above the ocean surface, sometimes higher
+above the land surface, in some cases
+like this cloud in the background all the way up
+to the tropopause.
+Below the bases of the clouds, very frequently, the atmosphere
+is undergoing dry convection, that
+is without a phase change of water.
+Let's talk a little bit about moist convection.
+The important properties of moist convection,
+so far as they affect the equilibrium state,
+is, as I mentioned before, significant heating owing
+to the phase change of water.
+This phase change, by the way, can and does
+operate in both directions.
+Water condenses in the atmosphere.
+Condensed water also evaporates, in many cases,
+absorbing the latent heat of vaporization or fusion
+and causing the air cool.
+The other important aspect of moist convection
+is that it redistributes from its source at the surface water
+up through the atmosphere.
+It is because of moist convection that our atmosphere
+itself is moist.
+Convection is the agent of lofting water.
+But water vapor, as we've seen before,
+is the most important greenhouse gas in the atmosphere.
+So the moist convective radiative equilibrium
+is strongly interactive.
+The instability of the radiative equilibrium
+drives moist convection.
+The moist convection lofts water from its source at the surface
+and controls the water vapor content
+of the atmosphere, which, in turn, determines
+to a large degree the radiative transfer.
+The other important aspect of moist convection
+is that by lofting water, it indirectly
+contributes to stratiform cloudiness,
+that is layered clouds, which have
+a large effect both on shortwave and longwave radiative
+transfer.
+Let's review, to begin with, the essential characteristics
+of water as a substance.
+This is a diagram showing the phase equilibrium of water
+as a function of temperature.
+And that phase equilibrium is denoted here
+by the equilibrium saturation vapor pressure.
+So there are three phases represented
+on this diagram, ice, liquid, and vapor.
+All of these three phases co-exist at something
+called the triple point.
+All these phases are in equilibrium with each other.
+This occurs at a temperature near zero degrees C and a vapor
+pressure of a little bit over 6 hectopascals.
+This curve is the phase equilibrium
+between liquid water and vapor.
+Notice that it increases toward the right
+as one increases the temperature,
+the vapor pressure increases.
+And it does so according to something
+called the Clausius-Clapeyron equation, which
+is a very important relationship in atmospheric science.
+So as one increases temperature, the saturation vapor pressure
+increases.
+It turns out it increases exponentially.
+Now, beyond something called the critical point here,
+it's no longer possible to distinguish
+between the vapor and the liquid phase of water.
+We don't need to worry about that in our atmosphere,
+because that critical point occurs
+at a temperature above 600 degrees Kelvin.
+Now, this curve here represents the phase equilibrium
+between liquid and ice.
+It occurs at a temperature of zero degrees
+at the triple point.
+But that temperature actually declines as pressure goes up.
+That means that as one applies pressure to water ice,
+eventually one can melt it under pressure.
+This is a somewhat peculiar characteristic
+of water as a substance.
+Other substances have phase equilibria
+between their liquid and solid phases
+which increase as one increases the temperature.
+Now, the third equilibrium, according
+to the Clausius-Clapeyron equation
+is the equilibrium between water ice, and vapor.
+And this starts at the triple point
+and goes down as the temperature decreases.
+So like the vapor-liquid equilibria,
+the saturation vapor pressure over ice
+increases with temperature.
+Now, one thing that you'll notice on this diagram
+is the dashed line which is a continuation
+of the liquid vapor equilibrium to temperatures
+below the critical point.
+This represents, once again, the equilibrium
+between the vapor and liquid phases.
+But we've carried that equilibrium below freezing.
+We've done so, because it turns out--
+and we'll talk about this later--
+there can be a great deal of supercooled water
+in the atmosphere, that is liquid water droplets that
+exists at temperatures below freezing.
+And the fact that these two curves are different,
+that is the vapor ice equilibrium
+differs from the vapor liquid equilibrium,
+turns out to be important for the physics of clouds.
